@@ -38,7 +38,7 @@ import ghidra.program.model.symbol.*;
 public class QueryAllFunctions extends GhidraScript {
 
 	private static final int MATCHES_PER_FUNC = 5;
-	private static final double SIMILARITY_BOUND = 0.9;
+	private static final double SIMILARITY_BOUND = 0.0;
 	private static final double CONFIDENCE_BOUND = 0.9;
 
 	private FunctionDatabase DATABASE = null;
@@ -72,7 +72,8 @@ public class QueryAllFunctions extends GhidraScript {
 	
 		File out_file = init_results_file(db_path_base);
 		FileWriter fw = new FileWriter(out_file, true); // get path back from init, true = append
-	
+	    fw.write(String.valueOf(currentProgram.getFunctionManager().getFunctionCount()) + "\n"); // add function count
+
 		for(FunctionIterator i = currentProgram.getFunctionManager().getFunctions(true); i.hasNext(); ) {
 			Function f = i.next();
 			if(f == null) { continue; }
@@ -89,7 +90,7 @@ public class QueryAllFunctions extends GhidraScript {
 			buf.append(database + ",");
 			buf.append(currentProgram.getExecutablePath() + ",");
 			buf.append(String.valueOf(SIMILARITY_BOUND) + ",");
-			buf.append(String.valueOf(CONFIDENCE_BOUND));
+			buf.append(String.valueOf(CONFIDENCE_BOUND) + "\n");
 			out_file = new File(out_path);
 			FileWriter fw = new FileWriter(out_file, false); // don't append, starting new file
 			fw.write(buf.toString());
