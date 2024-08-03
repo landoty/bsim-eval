@@ -24,7 +24,7 @@ def evaluate(files: list) -> None:
                     confs.append(float(conf))
                     total += 1
 
-            run_name = f.split(".")[0]
+            run_name = os.path.basename(f).split(".")[0]
 
             table_stats["runs"].append(run_name)
             table_stats["data"]["avg_sim"].append(round(sum(sims)/len(sims), 4))
