@@ -56,7 +56,16 @@ public class QueryAllFunctions extends GhidraScript {
 			return;
 		}
 		String args[] = getScriptArgs();
-		String database_url = args[0];
+        String fn_name_filter = ""; 
+        if(args.length < 1) {
+            println("Provide a database url!");
+            return;
+        }
+        if(args.length >= 2){
+            fn_name_filter = args[1];
+        }
+        String database_url = args[0];
+
 		URL url = BSimClientFactory.deriveBSimURL(database_url);
 		try {			
 			DATABASE = BSimClientFactory.buildClient(url, false);
@@ -72,14 +81,16 @@ public class QueryAllFunctions extends GhidraScript {
 	
 		File out_file = init_results_file(db_path_base);
 		FileWriter fw = new FileWriter(out_file, true); // get path back from init, true = append
-	    fw.write(String.valueOf(currentProgram.getFunctionManager().getFunctionCount()) + "\n"); // add function count
 
+        int num_functions = 0;
 		for(FunctionIterator i = currentProgram.getFunctionManager().getFunctions(true); i.hasNext(); ) {
 			Function f = i.next();
 			if(f == null) { continue; }
-			String result = run_query(f);
+            num_functions++;
+            String result = run_query(f, fn_name_filter);
 			fw.write(result);
 		}
+        fw.write(String.valueOf(num_functions) + "\n");
 		fw.close();	
 	}
 
@@ -103,7 +114,7 @@ public class QueryAllFunctions extends GhidraScript {
 		return out_file;
 	}
 
-	private String run_query(Function func) throws Exception {
+	private String run_query(Function func, String filter) throws Exception {
 	/* run query over a single function
  	 * TODO: currently print results but need to output to json
  	 */ 
@@ -139,6 +150,11 @@ public class QueryAllFunctions extends GhidraScript {
 					SimilarityNote note = subiter.next();
 					FunctionDescription fdesc = note.getFunctionDescription();
 					ExecutableRecord exerec = fdesc.getExecutableRecord();
+                    
+                    if(filter != "" && ! fdesc.getFunctionName().startsWith(filter)) {
+                        continue;
+                    }
+
 					buf.append(db_fn + ","); // function in db
 					buf.append(fdesc.getFunctionName() + ","); // function in binary
 					buf.append(note.getSimilarity() + ","); // similarity
