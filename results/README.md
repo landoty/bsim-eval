@@ -25,3 +25,29 @@ Collection of results from evaluation of BSim
 **Artifacts:**
 - matched functions (only `bat` namespace) from BSim queries
 - graphs from data analysis
+
+## Bat + Stdlib - *Rust*
+
+**Methodology**
+1. Create a BSim database and store the features from the static `Rust standard
+   lirbary`. Currently version 1.80
+2. Using the various optimization-level-compiled versions of `bat`, compare
+   against `rust-stdlib-v1.80`
+3. Evaluate match rate, similarity and it's distribution, confidence and it's distribution, and compare similarity v. confidence
+
+**Artifacts:**
+- matched functions (only `stdlib`) from BSim queries
+- graphs from data analysis
+
+## Correlation
+
+**Methodology**
+1. Combine all results from SQLite, Bat, and Bat + Stdlib
+2. Collect correct and incorrect matches
+3. Use a box plot to distinguish which metric (similarity v. confidence) is a
+   better indicator for function similarity
+
+**Artifacts**
+- box plots correlating confidence and similarity with match counts
+- normalized version to show overlap of incorrectly matched confidence scores
+  across range of possible values
