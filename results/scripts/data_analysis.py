@@ -14,10 +14,12 @@ def evaluate(files: list) -> None:
             total = 0
 
             db, binary, sim_thresh, conf_thresh = file.readline().strip().split(",")
-            num = int(file.readline().strip())
             for l in file.readlines():
                 l = l.strip()
-                db_fn, match_fn, sim, conf = l.split(",")
+                try: # most lines of this form
+                    db_fn, match_fn, sim, conf = l.split(",")
+                except: # last line has the total number of functions
+                    num = int(l)
 
                 if db_fn == match_fn:
                     sims.append(float(sim))
