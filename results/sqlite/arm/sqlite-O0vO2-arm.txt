@@ -1,5 +1,4 @@
-sqlite-O0.mv.db,/Users/landen/Research/bsim/bins/sqlite/sqlite3-O2.o,0.0,0.9
-1665
+/Users/landen/Research/bsim/bins/sqlite/arm/sqlite3-O2.o,sqlite-O0.mv.db,0.0,0.9
 sqlite3_status64,sqlite3AbsInt32,0.12858171790068926,4.107909061657912
 sqlite3_status64,sqlite3ResolvePartIdxLabel,0.12417009261420715,3.638354715497562
 sqlite3_status64,sqlite3IsNaN,0.11971879010618827,3.758909200408556
@@ -6586,3 +6585,4 @@ jsonEachOpenTree,jsonEachOpenTree,0.4972464766598941,11.07880335081347
 jsonEachOpenTree,sqlite3_vfs_unregister,0.4404364653717004,10.713022867527542
 jsonEachOpenTree,sqlite3_malloc64,0.3976945002474764,9.281168121224512
 jsonEachOpenTree,sqlite3_realloc64,0.39328885732275826,9.281168121224512
+1444
