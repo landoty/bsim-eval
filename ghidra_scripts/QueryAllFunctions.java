@@ -25,7 +25,7 @@ import ghidra.program.model.symbol.*;
 
 public class QueryAllFunctions extends GhidraScript {
 
-	private static final int MATCHES_PER_FUNC = 1;
+	private static final int MATCHES_PER_FUNC = 5;
 	private static final double SIMILARITY_BOUND = 0.0;
 	private static final double CONFIDENCE_BOUND = 0.9;
 
