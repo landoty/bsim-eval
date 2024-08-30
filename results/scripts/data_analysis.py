@@ -44,7 +44,7 @@ def evaluate(files: list) -> None:
         axs[1].set_ylabel("confidence")
 
     fig.legend()
-    plt.savefig("evaluation.png")
+    plt.savefig("postive-match-correlation.png")
 
     plt.clf()
 
@@ -60,7 +60,7 @@ def evaluate(files: list) -> None:
     ax.get_yaxis().set_visible(False)
     plt.box(on=None)
 
-    plt.savefig("table.png")
+    plt.savefig("match-accuracy.png")
 
 
 if __name__ == "__main__":
