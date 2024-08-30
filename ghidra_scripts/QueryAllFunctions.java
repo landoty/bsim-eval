@@ -1,20 +1,8 @@
-/* ###
- * IP: GHIDRA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * 
- *      http://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+/* File: QueryAllFunctions.java
+ * Author: Landen Doty
+ * Description: Use Ghidra's BSim API to query a BSim H2 database for function matches in a binary
+ * Credit: Based off of the Ghidra Developer's example script
  */
-// Example of querying a BSim database about a single function
-//@category BSim
 
 import java.net.URL;
 import java.util.Iterator;
@@ -37,7 +25,7 @@ import ghidra.program.model.symbol.*;
 
 public class QueryAllFunctions extends GhidraScript {
 
-	private static final int MATCHES_PER_FUNC = 5;
+	private static final int MATCHES_PER_FUNC = 1;
 	private static final double SIMILARITY_BOUND = 0.0;
 	private static final double CONFIDENCE_BOUND = 0.9;
 
@@ -50,56 +38,73 @@ public class QueryAllFunctions extends GhidraScript {
  	*  args: path to bsim directory
  	*  note: GhidraScript.run() doesn't explicitly take args. Get using
  	* 	getScriptArgs()	
- 	*/ 
+ 	*/
+
+        	// process arguments
 		if (currentProgram == null) {
 			println("No current program");
 			return;
 		}
+			
 		String args[] = getScriptArgs();
-        String fn_name_filter = ""; 
-        if(args.length < 1) {
-            println("Provide a database url!");
-            return;
-        }
-        if(args.length >= 2){
-            fn_name_filter = args[1];
-        }
-        String database_url = args[0];
-
+       		String fn_name_filter = ""; 
+        	if(args.length < 1) {
+            		println("Provide a database url!");
+            		return;
+        	}
+        
+		if(args.length >= 2){
+            		fn_name_filter = args[1];
+        	}
+        
+        	// Open the BSim database provided by args
+        	String database_url = args[0];
 		URL url = BSimClientFactory.deriveBSimURL(database_url);
 		try {			
 			DATABASE = BSimClientFactory.buildClient(url, false);
-			if(! DATABASE.initialize()) {
+            		if(! DATABASE.initialize()) {
 				println(DATABASE.getLastError().message);
+              			return;
 			} 
 		} catch(Exception e) {
 			println("Failed to open database");
+            		return;
 		} 
 
+        	// Initialize output file
 		String[] split = database_url.split("/", 0);
-		String db_path_base = split[split.length-1]; 
-	
+		String db_path_base = split[split.length-1]; 	
 		File out_file = init_results_file(db_path_base);
 		FileWriter fw = new FileWriter(out_file, true); // get path back from init, true = append
 
-        int num_functions = 0;
+        	// Iterate over functions
+        	// Query
+        	// Write results
+        	int num_functions = 0;
 		for(FunctionIterator i = currentProgram.getFunctionManager().getFunctions(true); i.hasNext(); ) {
 			Function f = i.next();
-			if(f == null) { continue; }
-            num_functions++;
-            String result = run_query(f, fn_name_filter);
-			fw.write(result);
+			if(f != null) {
+            			String result = run_query(f, fn_name_filter);
+				if(!result.isEmpty()) {
+					fw.write(result);
+					num_functions++;
+				}
+			}
 		}
-        fw.write(String.valueOf(num_functions) + "\n");
+        	fw.write(String.valueOf(num_functions) + "\n");
 		fw.close();	
 	}
 
 	private File init_results_file(String database) throws Exception {
+    	/*
+     	* Initialize output file of form:
+     	* database_name, binary_path, similarity bound, confidence bound
+     	*/
 		File out_file = null;
 		try {
 			StringBuffer buf = new StringBuffer(); 
-			buf.append(database + ",");
 			buf.append(currentProgram.getExecutablePath() + ",");
+			buf.append(database + ",");
 			buf.append(String.valueOf(SIMILARITY_BOUND) + ",");
 			buf.append(String.valueOf(CONFIDENCE_BOUND) + "\n");
 			out_file = new File(out_path);
@@ -115,57 +120,65 @@ public class QueryAllFunctions extends GhidraScript {
 	}
 
 	private String run_query(Function func, String filter) throws Exception {
-	/* run query over a single function
- 	 * TODO: currently print results but need to output to json
- 	 */ 
+	/* Perform query over a single function and generate a result string of
+     	* form:
+     	*
+ 	*/ 
 		GenSignatures gensig = new GenSignatures(false);
 		StringBuffer buf = new StringBuffer();
 		try {
+            		// generate a signature/feature vector for the target function
 			gensig.setVectorFactory(DATABASE.getLSHVectorFactory());
 			gensig.openProgram(currentProgram, null, null, null, null, null);
-
 			DescriptionManager manager = gensig.getDescriptionManager();
 			gensig.scanFunction(func);
-
+            
+            		// configure a query for the function
 			QueryNearest query = new QueryNearest();
 			query.manage = manager;
 			query.max = MATCHES_PER_FUNC;
 			query.thresh = SIMILARITY_BOUND;
 			query.signifthresh = CONFIDENCE_BOUND;
 
+            		// perform the query
 			ResponseNearest response = query.execute(DATABASE);
 			if (response == null) {
-				return "";
+                		println(DATABASE.getLastError().message);
 			}
-			
-			// modify this to output to json, txt, something to do analysis over
-			Iterator<SimilarityResult> iter = response.result.iterator();
-			while (iter.hasNext()) {
-				SimilarityResult sim = iter.next();
-				FunctionDescription base = sim.getBase();
-				String db_fn = base.getFunctionName();				
 		
-				Iterator<SimilarityNote> subiter = sim.iterator();
+            		// process result
+			Iterator<SimilarityResult> iter = response.result.iterator();
+			while (iter.hasNext()) { // while there exists a match
+				SimilarityResult result = iter.next();
+				FunctionDescription base = result.getBase();
+				String source_fn = base.getFunctionName();				
+		
+				Iterator<SimilarityNote> subiter = result.iterator();
 				while (subiter.hasNext()) {
 					SimilarityNote note = subiter.next();
 					FunctionDescription fdesc = note.getFunctionDescription();
-					ExecutableRecord exerec = fdesc.getExecutableRecord();
-                    
-                    if(filter != "" && ! fdesc.getFunctionName().startsWith(filter)) {
-                        continue;
-                    }
+                  
+                    			String matched_fn = fdesc.getFunctionName();
 
-					buf.append(db_fn + ","); // function in db
-					buf.append(fdesc.getFunctionName() + ","); // function in binary
+                    			// currently filtering for 
+                    			// match startswtih filter && source_fn startswith filter
+                    			if(filter != "" && !source_fn.startsWith(filter) && !matched_fn.startsWith(filter)) {
+                        			continue;
+                    			}
+
+					buf.append(source_fn + ","); // source fn in binary
+					buf.append(matched_fn + ","); // matched fn in database
 					buf.append(note.getSimilarity() + ","); // similarity
 					buf.append(note.getSignificance() + "\n"); // signifiance
 				}
 			}
+		}
+		catch(Exception e) {
+			println(e.getMessage());
 		}
 		finally {
 			gensig.dispose();
 		}
 		return buf.toString();
 	} 
-
 }
