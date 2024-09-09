@@ -47,16 +47,22 @@ public class QueryAllFunctions extends GhidraScript {
 		}
 			
 		String args[] = getScriptArgs();
-       		String fn_name_filter = ""; 
         	if(args.length < 1) {
             		println("Provide a database url!");
             		return;
         	}
         
-		if(args.length >= 2){
-            		fn_name_filter = args[1];
+		boolean filter_namespace = false;
+		String filter_string = "";
+		if(args.length > 2){
+			String filter_option = args[1];	
+			if(filter_option.equals("namespace")){
+				filter_namespace = true;
+				filter_string = args[2];		
+				println("Query by namespace " + filter_string);
+			}
         	}
-        
+
         	// Open the BSim database provided by args
         	String database_url = args[0];
 		URL url = BSimClientFactory.deriveBSimURL(database_url);
@@ -80,18 +86,23 @@ public class QueryAllFunctions extends GhidraScript {
         	// Iterate over functions
         	// Query
         	// Write results
+        	SymbolTable sym_table = currentProgram.getSymbolTable();
         	int num_functions = 0;
 		for(FunctionIterator i = currentProgram.getFunctionManager().getFunctions(true); i.hasNext(); ) {
 			Function f = i.next();
+			// function exists
 			if(f != null) {
-            			String result = run_query(f, fn_name_filter);
+				if(filter_namespace){
+					String ns = sym_table.getNamespace(f.getEntryPoint()).getName(true); // get fullly qualified name
+					if(!ns.startsWith(filter_string)) { continue; } // inclusive filter
+				}
+            			String result = run_query(f);
 				if(!result.isEmpty()) {
-					fw.write(result);
+					fw.write(String.valueOf(num_functions) + " " + result);
 					num_functions++;
 				}
 			}
 		}
-        	fw.write(String.valueOf(num_functions) + "\n");
 		fw.close();	
 	}
 
@@ -119,7 +130,7 @@ public class QueryAllFunctions extends GhidraScript {
 		return out_file;
 	}
 
-	private String run_query(Function func, String filter) throws Exception {
+	private String run_query(Function func) throws Exception {
 	/* Perform query over a single function and generate a result string of
      	* form:
      	*
@@ -160,16 +171,10 @@ public class QueryAllFunctions extends GhidraScript {
                   
                     			String matched_fn = fdesc.getFunctionName();
 
-                    			// currently filtering for 
-                    			// match startswtih filter && source_fn startswith filter
-                    			if(filter != "" && !source_fn.startsWith(filter) && !matched_fn.startsWith(filter)) {
-                        			continue;
-                    			}
-
-					buf.append(source_fn + ","); // source fn in binary
-					buf.append(matched_fn + ","); // matched fn in database
-					buf.append(note.getSimilarity() + ","); // similarity
-					buf.append(note.getSignificance() + "\n"); // signifiance
+					buf.append('"' + source_fn + '"' +  ","); // source fn in binary
+					buf.append('"' + matched_fn + '"' + ","); // matched fn in database
+					buf.append('"' + String.valueOf(note.getSimilarity()) + '"' + ","); // similarity
+					buf.append('"' + String.valueOf(note.getSignificance()) + '"' + "\n"); // signifiance
 				}
 			}
 		}
