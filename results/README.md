@@ -39,6 +39,18 @@ Collection of results from evaluation of BSim
 - matched functions (only `stdlib`) from BSim queries
 - graphs from data analysis
 
+## Hyper - *Rust*
+
+**Motivation**
+
+The results from *Bat* were less than ideal in terms of query match accuracy. To confirm if this behavior from BSim was unique to the Bat application or actually affected by differens in source-level language and semantics, we need to collect more data.
+
+Hyper is a HTTP library written in Rust, providing interfaces for both HTTP servers and clients. We build the `Hello World` example from their documentation and generate signatures/perform queries on the included Hyper libraries.
+
+**Methodology**
+1. Build and compile the Hello World HTTP server [from the Hyper Libray guide](https://hyper.rs/guides/1/server/hello-world/) at optimization levels O0 - O4
+2. 
+
 ## Correlation
 
 **Methodology**
