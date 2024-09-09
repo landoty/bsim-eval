@@ -1,130 +1,355 @@
-bat-O0-x64.mv.db,/Users/landen/Research/bsim/bins/bat/x64/bat-O1,0.0,0.9
-_<core::iter::adapters::map::Map<IF>as_core::iter::traits::iterator::Iterator>::next,bat::vscreen::Attributes::update_with_charset,0.1525421255078695,3.2987042065263443
-clap_builder::parser::matches::arg_matches::ArgMatches::get_many,bat::style::StyleComponentList::contains_override,0.1892426883381529,4.899514404196165
-clap_builder::parser::matches::arg_matches::ArgMatches::get_many,bat::style::StyleComponentList::contains_override,0.1892426883381529,4.899514404196165
-clap_builder::builder::arg::Arg::value_parser,bat::assets::build_assets::acknowledgements::normalize_license_text,0.17530272181234324,3.792117805728915
-core::ptr::drop_in_place<bat::input::Input>,bat::controller::Controller::run_with_error_handler::_{{closure}},0.3147999666324885,12.453004330848842
-core::ptr::drop_in_place<bat::input::InputMetadata>,bat::input::InputDescription::title,0.4318556994733532,9.32259634896245
-core::ptr::drop_in_place<once_cell::sync::OnceCell<syntect::parsing::syntax_set::FirstLineCache>>,bat::input::InputDescription::title,0.4318556994733532,9.32259634896245
-bat::config::config_file,bat::assets::build_assets::acknowledgements::normalize_license_text,0.19375240793320758,6.164677502421387
-bat::main,bat::main,0.47551528279331323,22.11426616305124
-_<aho_corasick::nfa::noncontiguous::NFA_as_aho_corasick::automaton::Automaton>::prefilter,bat::input::InputDescription::title,0.710833634970037,12.807804239626147
-_<aho_corasick::nfa::contiguous::NFA_as_aho_corasick::automaton::Automaton>::prefilter,bat::input::InputDescription::title,0.710833634970037,12.807804239626147
-_<aho_corasick::dfa::DFA_as_aho_corasick::automaton::Automaton>::prefilter,bat::input::InputDescription::title,0.710833634970037,12.807804239626147
-_<aho_corasick::util::prefilter::RareByteOffsets_as_core::fmt::Debug>::fmt,bat::set_terminal_title_to,0.14752802670478837,3.9459022009138867
-plist::stream::xml_reader::ReaderState<R>::read_next,bat::clap_app::build_app::_{{closure}},0.17176464696414184,4.968220374959199
-bincode::de::Deserializer<RO>::deserialize_byte,bat::vscreen::EscapeSequenceOffsetsIterator::chars_take_while,0.15004686442042378,4.013399273950415
-_<&mut_bincode::de::Deserializer<RO>as_serde::de::Deserializer>::deserialize_tuple,bat::assets::HighlightingAssets::get_syntax,0.16717175190641032,2.8429123046879026
-_<&mut_bincode::de::Deserializer<RO>as_serde::de::Deserializer>::deserialize_map,bat::config::get_args_from_config_file,0.17933877725007294,7.514692415142518
-std::process::Command::new,bat::assets::asset_from_cache::_{{closure}},0.43344265432958273,9.062346928083148
-std::process::Command::new,bat::assets::asset_from_cache::_{{closure}},0.43344265432958273,9.062346928083148
-_<hashbrown::raw::RawTable<>as_core::ops::drop::Drop>::drop,bat::input::Input::is_stdin,0.2542074537541989,7.781191592047499
-bincode::internal::deserialize_from_custom_seed,bat::config::get_args_from_env_vars::_{{closure}}::_{{closure}},0.6098261554925559,13.292119011221141
-core::ops::function::FnOnce::call_once{{vtable.shim}},bat::assets::build_assets::acknowledgements::build_acknowledgements::_{{closure}},0.3608202036560721,11.596102231570196
-syntect::parsing::syntax_set::SyntaxSetBuilder::add_from_folder::_{{closure}},bat::assets::build_assets::acknowledgements::build_acknowledgements::_{{closure}},0.3608202036560721,11.596102231570196
-bat::assets::lazy_theme_set::LazyTheme::deserialize,bat::syntax_mapping::SyntaxMapping::insert,0.2647620684772677,11.209596331169324
-bat::assets::asset_from_contents,bat::syntax_mapping::SyntaxMapping::insert,0.27619768844393006,9.033533391607492
-bat::assets::lazy_theme_set::_<impl_core::convert::TryFrom<bat::assets::lazy_theme_set::LazyThemeSet>for_syntect::highlighting::theme_set::ThemeSet>::try_from,bat::assets::lazy_theme_set::_<impl_core::convert::TryFrom<bat::assets::lazy_theme_set::LazyThemeSet>for_syntect::highlighting::theme_set::ThemeSet>::try_from,0.22568578638825593,10.585602483689996
-_<bat::assets::lazy_theme_set::LazyThemeSet_as_core::convert::TryFrom<syntect::highlighting::theme_set::ThemeSet>>::try_from,bat::assets::lazy_theme_set::_<impl_core::convert::TryFrom<bat::assets::lazy_theme_set::LazyThemeSet>for_syntect::highlighting::theme_set::ThemeSet>::try_from,0.18176043246549412,6.776521698570892
-_<bat::assets::lazy_theme_set::LazyThemeSet_as_core::convert::TryFrom<syntect::highlighting::theme_set::ThemeSet>>::try_from,bat::assets::build_assets::acknowledgements::build_acknowledgements,0.16961185878199805,6.42480695242141
-bat::assets::build_assets::acknowledgements::license_contains_marker,bat::assets::build_assets::acknowledgements::normalize_license_text,0.35739581087299266,21.129819767047817
-bat::pager::get_pager,bat::pager::PagerKind::from_bin,0.1967484923990246,8.117532335887716
-bat::pager::get_pager,bat::assets::build_assets::acknowledgements::normalize_license_text,0.18970548841600116,5.549427999509855
-bat::pager::get_pager,bat::pager::get_pager,0.185064522690012,8.268428895769356
-bat::error::default_error_handler,bat::error::default_error_handler,0.2662680655173139,10.698453767803322
-bat::printer::OutputHandle::write_fmt,bat::printer::OutputHandle::write_fmt,0.33817078448573307,12.875878846672018
-bat::terminal::to_ansi_color,bat::terminal::to_ansi_color,0.24163037386879943,13.218552895128244
-bat::printer::InteractivePrinter::print_horizontal_line,bat::printer::InteractivePrinter::print_horizontal_line,0.22468278410556963,10.460422339573107
-bat::printer::InteractivePrinter::print_horizontal_line,bat::printer::OutputHandle::write_fmt,0.1976144057709256,3.7822746729439283
-bat::printer::InteractivePrinter::print_horizontal_line,bat::printer::InteractivePrinter::create_fake_panel,0.157484460561262,1.5039320833627263
-bat::printer::InteractivePrinter::print_horizontal_line,bat::printer::InteractivePrinter::print_header_component_indent,0.15712956409730242,0.9414898079554499
-bat::printer::InteractivePrinter::print_horizontal_line_term,bat::printer::OutputHandle::write_fmt,0.3080575776674559,13.286655650956622
-bat::decorations::LineChangesDecoration::generate_cached,bat::decorations::GridBorderDecoration::new,0.3296266728906577,11.762815484810023
-bat::input::InputKind::description,bat::input::InputKind::description,0.3540276164795861,15.499327160269441
-bat::input::Input::_with_name,bat::assets::build_assets::acknowledgements::normalize_license_text,0.26720697534717924,12.200321088183244
-bat::style::StyleComponent::components,bat::style::StyleComponent::components,1.0,19.311611506761423
-core::ptr::drop_in_place<std::collections::hash::set::HashSet<bat::style::StyleComponent>>,bat::input::Input::is_stdin,0.2542074537541989,7.781191592047499
-_<bugreport::collector::CommandLine_as_bugreport::collector::Collector>::collect,bat::vscreen::Attributes::update_with_charset,0.2597513582500023,10.888555123753441
-_<bugreport::collector::CommandLine_as_bugreport::collector::Collector>::collect,bat::assets::build_assets::acknowledgements::normalize_license_text,0.23236436915507863,9.76495093744271
-_<bugreport::format::markdown::Markdown_as_bugreport::format::Format>::format_entry,bat::printer::InteractivePrinter::print_header_component_indent,0.17860983668247724,6.708192677361509
-clap_builder::parser::features::suggestions::did_you_mean,bat::config::get_args_from_env_vars::_{{closure}},0.5665948445081919,11.504558722098
-clap_builder::parser::features::suggestions::did_you_mean,bat::clap_app::build_app::_{{closure}},0.44685857088911807,8.651718549793658
-clap_builder::builder::arg::Arg::help,bat::printer::InteractivePrinter::print_header_component_indent,0.24592391058217725,8.403422899206907
-clap_builder::builder::command::Command::about,bat::printer::InteractivePrinter::print_header_component_indent,0.24592391058217725,8.403422899206907
-clap_builder::builder::arg::Arg::stylized,bat::printer::InteractivePrinter::print_header_component_indent,0.2068575731592519,6.311868160840422
-clap_builder::builder::arg::Arg::stylized,bat::assets::asset_from_cache::_{{closure}},0.1711391036058579,2.456916924969984
-clap_builder::builder::arg::Arg::stylized,bat::assets::asset_from_cache::_{{closure}},0.1711391036058579,2.456916924969984
-clap_builder::builder::arg::Arg::stylized,bat::assets::build_assets::asset_to_cache::_{{closure}},0.1711391036058579,2.456916924969984
-clap_builder::parser::features::suggestions::did_you_mean,bat::config::get_args_from_env_vars::_{{closure}},0.5665948445081919,11.504558722098
-clap_builder::parser::features::suggestions::did_you_mean,bat::clap_app::build_app::_{{closure}},0.44685857088911807,8.651718549793658
-anstream::auto::AutoStream<S>::new,bat::style::StyleComponent::components,1.0,19.311611506761423
-anstream::auto::AutoStream<S>::new,bat::style::StyleComponent::components,1.0,19.311611506761423
-clap_builder::util::flat_map::FlatMap<>::insert,bat::style::StyleComponentList::to_components::_{{closure}},0.2568648108717017,2.100266941351136
-clap_builder::parser::parser::Parser::help_err,bat::printer::InteractivePrinter::get_header_component_indent_length,0.33418983238351807,10.53115097731182
-clap_builder::parser::parser::Parser::help_err,bat::printer::InteractivePrinter::print_header_component_indent,0.3055972464899014,11.153519936461944
-clap_builder::output::help_template::HelpTemplate::new,bat::vscreen::EscapeSequenceOffsetsIterator::chars_take_while,0.20388229708543953,9.436448414885156
-clap_builder::output::help_template::HelpTemplate::new,bat::vscreen::EscapeSequenceOffsetsIterator::chars_take_while,0.20388229708543953,9.436448414885156
-clap_builder::parser::features::suggestions::did_you_mean,bat::config::get_args_from_env_vars::_{{closure}},0.5665948445081919,11.504558722098
-clap_builder::parser::features::suggestions::did_you_mean,bat::clap_app::build_app::_{{closure}},0.44685857088911807,8.651718549793658
-clap_lex::ParsedArg::is_negative_number,bat::less::parse_less_version_busybox,0.1311664549789899,3.285822584599151
-_<std::io::buffered::bufreader::BufReader<R>as_std::io::BufRead>::fill_buf,bat::clap_app::build_app::_{{closure}}::_{{closure}},0.40964099294282913,14.916537595641845
-git2::repo::Repository::workdir,bat::assets::build_assets::acknowledgements::license_contains_marker::_{{closure}},0.2987640984433169,8.485348047500775
-std::sync::mutex::Mutex<T>::try_lock,bat::output::OutputType::handle,0.2890129137680054,11.322270133054005
-globset::glob::char_to_escaped_literal,bat::vscreen::Attributes::sgr_reset,0.20097861748312115,5.802878001451323
-globset::glob::char_to_escaped_literal,bat::assets::build_assets::acknowledgements::normalize_license_text,0.1967794856851635,8.413641755688616
-nu_ansi_term::ansi::_<impl_nu_ansi_term::style::Style>::write_prefix::_{{closure}},bat::printer::OutputHandle::write_fmt,0.31015550051414514,12.45210612616681
-time::formatting::formattable::sealed::Sealed::format,bat::input::Input::_with_name,0.3640380032991765,14.04510640229925
-_<regex::error::Error_as_core::fmt::Debug>::fmt,bat::printer::OutputHandle::write_fmt,0.257346811426232,9.910965489040905
-regex_syntax::hir::Hir::class,bat::style::StyleComponentList::to_components::_{{closure}},0.31247052933366626,14.916778754529354
-_<aho_corasick::dfa::DFA_as_aho_corasick::automaton::Automaton>::prefilter,bat::input::InputDescription::title,0.710833634970037,12.807804239626147
-_<aho_corasick::nfa::contiguous::NFA_as_aho_corasick::automaton::Automaton>::prefilter,bat::input::InputDescription::title,0.710833634970037,12.807804239626147
-_<aho_corasick::nfa::noncontiguous::NFA_as_aho_corasick::automaton::Automaton>::prefilter,bat::input::InputDescription::title,0.710833634970037,12.807804239626147
-_<regex_automata::util::look::LookSet_as_core::fmt::Debug>::fmt,bat::terminal::to_ansi_color,0.20896453596525622,7.88022673119482
-core::ptr::drop_in_place<regex_syntax::ast::ClassUnicode>,bat::input::InputDescription::title,0.2883144847752379,8.214360364978567
-regex_automata::util::prefilter::aho_corasick::AhoCorasick::new,bat::syntax_mapping::make_glob_matcher,0.4107191430187764,15.098522744395133
-regex_automata::util::prefilter::aho_corasick::AhoCorasick::new,bat::syntax_mapping::make_glob_matcher,0.4107191430187764,15.098522744395133
-core::ptr::drop_in_place<regex_syntax::ast::parse::Primitive>,bat::input::Input::is_stdin,0.2517737885349268,7.800474975714611
-regex_syntax::hir::ClassUnicode::literal,bat::clap_app::build_app::_{{closure}}::_{{closure}},0.29645224636881534,11.261907972682382
-_<regex_syntax::hir::LookSet_as_core::fmt::Debug>::fmt,bat::terminal::to_ansi_color,0.20896453596525622,7.88022673119482
-_<serde_yaml::de::MapAccess_as_serde::de::MapAccess>::next_value_seed,bat::input::InputDescription::title,0.31653898149613224,8.726344423694632
-_<serde_yaml::libyaml::tag::Tag_as_core::cmp::PartialEq<str>>::eq,bat::assets::build_assets::acknowledgements::build_acknowledgements::_{{closure}},0.7608346956781834,10.625463352966934
-bincode::internal::deserialize_from_custom_seed,bat::config::get_args_from_env_vars::_{{closure}}::_{{closure}},0.5777464295039315,12.443561713404478
-bincode::de::read::IoReader<R>::fill_buffer,bat::printer::InteractivePrinter::get_header_component_indent_length,0.20178946182865254,7.344587927947751
-_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<I>>::from_iter,bat::vscreen::EscapeSequenceOffsetsIterator::chars_take_while,0.2902535956469119,13.844793633851271
-_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<I>>::from_iter,bat::vscreen::EscapeSequenceOffsetsIterator::chars_take_while,0.2902535956469119,13.844793633851271
-_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<I>>::from_iter,bat::vscreen::EscapeSequenceOffsetsIterator::chars_take_while,0.2902535956469119,13.844793633851271
-_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<I>>::from_iter,bat::vscreen::EscapeSequenceOffsetsIterator::chars_take_while,0.2902535956469119,13.844793633851271
-_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<I>>::from_iter,bat::vscreen::EscapeSequenceOffsetsIterator::chars_take_while,0.2902535956469119,13.844793633851271
-_<syntect::LoadingError_as_core::fmt::Display>::fmt,bat::input::InputDescription::title,0.22661348251163066,6.067405656166802
-_<hashbrown::raw::RawTable<>as_core::clone::Clone>::clone,bat::input::InputDescription::title,0.31041073199490493,8.603360410165479
-_<hashbrown::raw::RawTable<>as_core::clone::Clone>::clone,bat::input::InputDescription::title,0.31041073199490493,8.603360410165479
-_<&mut_bincode::ser::Serializer<>as_serde::ser::Serializer>::serialize_str,bat::output::OutputType::try_pager::_{{closure}},0.40600070105158187,7.9430428048348585
-linked_hash_map::LinkedHashMap<>::new,bat::input::InputDescription::title,0.3325290246046564,7.883120420600499
-yaml_rust::yaml::YamlLoader::load_from_str,bat::vscreen::Attributes::sgr_reset,0.15251054791573893,2.3356414271695694
-index_entry_adjust_namemask,bat::input::InputDescription::title,0.32593207783286704,8.166655199115151
-tree_iterator_init,bat::vscreen::Attributes::update_with_hyperlink,0.2332652266929789,7.29246090243789
-git_libgit2_init,bat::diff::get_git_diff::_{{closure}}::_{{closure}},1.0,10.222873874554535
-odb_cache,bat::input::InputDescription::title,0.6829559195291677,12.62680001724743
-git_sysdir_find_homedir,bat::assets::get_acknowledgements,0.6231596757843781,8.178302021063635
-git_tag__parse,bat::assets::assets_metadata::AssetsMetadata::is_compatible_with::_{{closure}},0.3748996654517551,8.127745610469557
-git_tlsdata_init,bat::vscreen::Attributes::update_with_sgr::_{{closure}},0.5382075088886161,9.058219174091015
-git__linenlen,bat::vscreen::Attributes::update_with_sgr::_{{closure}},0.19644106916656337,5.998309110517384
-git_zstream_done,bat::input::InputDescription::title,0.6552713514386841,12.46286011028893
-is_cr_needed,bat::input::InputDescription::title,0.26348435608905924,7.857985591911213
-git_attr_path__free,bat::output::OutputType::stdout,0.5678113304067791,9.32788263325166
-config_snapshot_unlock,bat::diff::get_git_diff::_{{closure}}::_{{closure}},0.6268738168196494,8.178302021063635
-config_snapshot_set,bat::diff::get_git_diff::_{{closure}}::_{{closure}},0.6268738168196494,8.178302021063635
-config_snapshot_set_multivar,bat::diff::get_git_diff::_{{closure}}::_{{closure}},0.6268738168196494,8.178302021063635
-config_snapshot_delete,bat::diff::get_git_diff::_{{closure}}::_{{closure}},0.6268738168196494,8.178302021063635
-config_snapshot_delete_multivar,bat::diff::get_git_diff::_{{closure}}::_{{closure}},0.6268738168196494,8.178302021063635
-config_snapshot_lock,bat::diff::get_git_diff::_{{closure}}::_{{closure}},0.6268738168196494,8.178302021063635
-packed_map_free,bat::input::InputDescription::title,0.37555306271050665,8.693559298586301
-onig_st_init_strend_table_with_size,bat::vscreen::Attributes::update_with_sgr::_{{closure}},1.0,10.270301608378436
-onig_st_init_callout_name_table_with_size,bat::vscreen::Attributes::update_with_sgr::_{{closure}},1.0,10.270301608378436
-len_multiply_cmp,bat::vscreen::EscapeSequenceOffsetsIterator::next_osc::_{{closure}},0.28465140141355266,9.617592803740717
-onigenc_single_byte_code_to_mbclen,bat::vscreen::EscapeSequenceOffsetsIterator::next_csi::_{{closure}},0.2695918737461023,6.611979807974791
-onigenc_single_byte_code_to_mbclen,bat::vscreen::EscapeSequenceOffsetsIterator::next_csi::_{{closure}},0.2695918737461023,6.611979807974791
-onigenc_single_byte_code_to_mbclen,bat::vscreen::EscapeSequenceOffsetsIterator::next_nf::_{{closure}},0.2695918737461023,6.611979807974791
-onigenc_is_mbc_word_ascii,bat::input::InputDescription::title,0.2456376961896268,6.8471088789893795
-onigenc_unicode_fold2_key,bat::app::is_truecolor_terminal::_{{closure}},0.16460002591182507,5.631817273154825
-8037
+/Users/landen/Research/bsim/bins/bat/x64/bat-O1,bat-O0-x64.mv.db,0.0,0.9
+0 "bat::assets::assets_from_cache_or_binary","syntect::highlighting::theme_load::_<impl_syntect::highlighting::settings::ParseSettings_for_syntect::highlighting::theme::ThemeItem>::parse_settings","0.18044295404896732","3.3687691827142197"
+1 "bat::config::config_file","anstyle_query::term_supports_color","0.2314598503946367","9.170777397639046"
+"bat::config::config_file","clap_builder::parser::parser::Parser::resolve_pending","0.22299055143265303","9.19001747513228"
+"bat::config::config_file","regex_automata::nfa::thompson::compiler::Utf8Compiler::pop_freeze","0.19816292487764403","6.887330250758989"
+"bat::config::config_file","bat::assets::build_assets::acknowledgements::normalize_license_text","0.19375240793320758","6.164677502421387"
+"bat::config::config_file","alloc::string::clone","0.18196341499913535","5.966645731115322"
+2 "bat::config::get_args_from_env_vars","_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter","0.3541346179406375","22.311070264117493"
+"bat::config::get_args_from_env_vars","_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter","0.3541346179406375","22.311070264117493"
+"bat::config::get_args_from_env_vars","_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter","0.3541346179406375","22.311070264117493"
+"bat::config::get_args_from_env_vars","_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter","0.3541346179406375","22.311070264117493"
+"bat::config::get_args_from_env_vars","_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter","0.3541346179406375","22.311070264117493"
+3 "bat::input::named","_<u8_as_alloc::vec::spec_from_elem::SpecFromElem>::from_elem","0.32998036702092687","12.311527914614025"
+"bat::input::named","std::sys::os_str::bytes::fmt","0.3015862458286946","9.236036853833372"
+"bat::input::named","regex_automata::util::look::LookMatcher::is_word_start_half_ascii","0.29800879740044767","9.818354967048979"
+"bat::input::named","core::slice::_<impl[T]>::chunks_exact","0.27572234557991654","9.126299169002694"
+"bat::input::named","clap_lex::split_nonutf8_once","0.2721711567368456","9.585859934212813"
+4 "bat::run_controller","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.22481346984429484","5.888462157968305"
+"bat::run_controller","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.22481346984429484","5.888462157968305"
+"bat::run_controller","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.22481346984429484","5.888462157968305"
+"bat::run_controller","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.22481346984429484","5.888462157968305"
+"bat::run_controller","_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter","0.22381947216732304","7.820385166651655"
+5 "bat::main","bat::main","0.47551528279331323","22.11426616305124"
+"bat::main","anstyle::color::Color::render_underline","0.21675485730795876","7.602680410663083"
+"bat::main","anstyle::color::Color::render_bg","0.18794584425687894","6.085500792284535"
+"bat::main","anstyle::color::Color::render_fg","0.18794584425687894","6.085500792284535"
+"bat::main","_<serde_yaml::libyaml::error::Mark_as_core::fmt::Debug>::fmt","0.1870886204036995","6.3542438885672965"
+6 "bat::assets::assets_metadata::_::_<impl_serde::ser::Serialize_for_bat::assets::assets_metadata::AssetsMetadata>::serialize","_<alloc::vec::drain::Drain<T,A>as_core::iter::traits::iterator::Iterator>::next","0.22404246970694391","7.659277877237461"
+"bat::assets::assets_metadata::_::_<impl_serde::ser::Serialize_for_bat::assets::assets_metadata::AssetsMetadata>::serialize","_<core::iter::adapters::map::Map<I,F>as_core::iter::traits::double_ended::DoubleEndedIterator>::next_back","0.22404246970694391","7.659277877237461"
+"bat::assets::assets_metadata::_::_<impl_serde::ser::Serialize_for_bat::assets::assets_metadata::AssetsMetadata>::serialize","_<core::iter::adapters::map::Map<I,F>as_core::iter::traits::iterator::Iterator>::next","0.22404246970694391","7.659277877237461"
+"bat::assets::assets_metadata::_::_<impl_serde::ser::Serialize_for_bat::assets::assets_metadata::AssetsMetadata>::serialize","_<core::iter::adapters::map::Map<I,F>as_core::iter::traits::iterator::Iterator>::next","0.22404246970694391","7.659277877237461"
+"bat::assets::assets_metadata::_::_<impl_serde::ser::Serialize_for_bat::assets::assets_metadata::AssetsMetadata>::serialize","_<core::iter::adapters::map::Map<I,F>as_core::iter::traits::iterator::Iterator>::next","0.22404246970694391","7.659277877237461"
+7 "bat::syntax_mapping::make_glob_matcher","aho_corasick::packed::teddy::generic::FatMaskBuilder::from_teddy::_{{closure}}","0.2989263598276587","8.797333577062862"
+"bat::syntax_mapping::make_glob_matcher","aho_corasick::packed::teddy::generic::FatMaskBuilder::from_teddy::_{{closure}}","0.2989263598276587","8.797333577062862"
+"bat::syntax_mapping::make_glob_matcher","aho_corasick::packed::teddy::generic::FatMaskBuilder::from_teddy::_{{closure}}","0.2989263598276587","8.797333577062862"
+"bat::syntax_mapping::make_glob_matcher","aho_corasick::packed::teddy::generic::FatMaskBuilder::from_teddy::_{{closure}}","0.2989263598276587","8.797333577062862"
+"bat::syntax_mapping::make_glob_matcher","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.2989263598276587","8.797333577062862"
+8 "bat::assets::build_assets::acknowledgements::build_acknowledgements::_{{closure}}","FUN_0074130f","0.5839439979992544","8.948709465820523"
+"bat::assets::build_assets::acknowledgements::build_acknowledgements::_{{closure}}","_<<serde_json::value::Value_as_core::fmt::Display>::fmt::WriterFormatter_as_std::io::Write>::write","0.5839439979992544","8.948709465820523"
+"bat::assets::build_assets::acknowledgements::build_acknowledgements::_{{closure}}","_<std::path::Path_as_core::cmp::Ord>::cmp","0.44235451585932334","7.961373506823223"
+"bat::assets::build_assets::acknowledgements::build_acknowledgements::_{{closure}}","core::ptr::drop_in_place<std::thread::PanicGuard>","0.44235451585932334","7.961373506823223"
+"bat::assets::build_assets::acknowledgements::build_acknowledgements::_{{closure}}","std::rt::lang_start_internal::{closure#0}","0.44235451585932334","7.961373506823223"
+9 "bat::assets::lazy_theme_set::LazyTheme::deserialize","regex_automata::nfa::thompson::pikevm::Builder::build_from_nfa","0.2731947555081264","12.385778926441949"
+"bat::assets::lazy_theme_set::LazyTheme::deserialize","bat::syntax_mapping::SyntaxMapping::insert","0.2647620684772677","11.209596331169324"
+"bat::assets::lazy_theme_set::LazyTheme::deserialize","regex_automata::nfa::thompson::backtrack::Builder::build_from_nfa","0.2423187520352409","10.62008865810177"
+"bat::assets::lazy_theme_set::LazyTheme::deserialize","alloc::collections::btree::map::BTreeMap<K,V,A>::insert","0.24122779696431623","2.0553560786307914"
+"bat::assets::lazy_theme_set::LazyTheme::deserialize","yaml_rust::scanner::Scanner<T>::fetch_flow_collection_end","0.23976921308694152","8.039358435011426"
+10 "bat::assets::asset_from_contents","_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter","0.287394118763946","14.392269424112435"
+"bat::assets::asset_from_contents","core::option::Option<T>::ok_or_else","0.2827677582466408","6.958737161801739"
+"bat::assets::asset_from_contents","core::option::Option<T>::ok_or_else","0.2827677582466408","6.958737161801739"
+"bat::assets::asset_from_contents","_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter","0.28169268643737727","14.2015324488987"
+"bat::assets::asset_from_contents","bat::syntax_mapping::SyntaxMapping::insert","0.27619768844393006","9.033533391607492"
+11 "bat::assets::assets_metadata::AssetsMetadata::load_from_folder","_<serde_json::value::de::<impl_serde::de::Deserialize_for_serde_json::value::Value>::deserialize::ValueVisitor_as_serde::de::Visitor>::visit_map","0.2362961679553975","14.008996096514316"
+"bat::assets::assets_metadata::AssetsMetadata::load_from_folder","_<bat::assets::lazy_theme_set::LazyThemeSet_as_core::convert::TryFrom<syntect::highlighting::theme_set::ThemeSet>>::try_from","0.20029879357029615","8.809073225967225"
+"bat::assets::assets_metadata::AssetsMetadata::load_from_folder","regex_automata::meta::reverse_inner::extract","0.198567570974861","7.5363960237120855"
+"bat::assets::assets_metadata::AssetsMetadata::load_from_folder","std::process::Command::spawn","0.1968914768835758","4.631462339656296"
+"bat::assets::assets_metadata::AssetsMetadata::load_from_folder","regex_automata::util::captures::GroupInfo::new","0.1898696605970062","4.022143765103889"
+12 "bat::assets::assets_metadata::AssetsMetadata::is_compatible_with","alloc::collections::btree::navigate::_<impl_alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Dying,K,V,alloc::collections::btree::node::marker::Leaf>,alloc::collections::btree::node::marker::Edge>>::deallocating_next_unchecked::_{{closure}}","0.3152968356265919","9.511685208569173"
+"bat::assets::assets_metadata::AssetsMetadata::is_compatible_with","alloc::collections::btree::navigate::_<impl_alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Dying,K,V,alloc::collections::btree::node::marker::Leaf>,alloc::collections::btree::node::marker::Edge>>::deallocating_next_unchecked::_{{closure}}","0.3152968356265919","9.511685208569173"
+"bat::assets::assets_metadata::AssetsMetadata::is_compatible_with","alloc::collections::btree::navigate::_<impl_alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Dying,K,V,alloc::collections::btree::node::marker::Leaf>,alloc::collections::btree::node::marker::Edge>>::deallocating_next_unchecked::_{{closure}}","0.3152968356265919","9.511685208569173"
+"bat::assets::assets_metadata::AssetsMetadata::is_compatible_with","alloc::collections::btree::navigate::_<impl_alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Dying,K,V,alloc::collections::btree::node::marker::Leaf>,alloc::collections::btree::node::marker::Edge>>::deallocating_next_unchecked::_{{closure}}","0.3152968356265919","9.511685208569173"
+"bat::assets::assets_metadata::AssetsMetadata::is_compatible_with","alloc::collections::btree::navigate::_<impl_alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Dying,K,V,alloc::collections::btree::node::marker::Leaf>,alloc::collections::btree::node::marker::Edge>>::deallocating_next_unchecked::_{{closure}}","0.3152968356265919","9.511685208569173"
+13 "bat::assets::asset_from_contents","regex_automata::nfa::thompson::compiler::Compiler::c_empty","0.3020600430099882","11.674034185406523"
+"bat::assets::asset_from_contents","regex_automata::nfa::thompson::compiler::Compiler::c_fail","0.3020600430099882","11.674034185406523"
+"bat::assets::asset_from_contents","regex_automata::nfa::thompson::compiler::Compiler::c_range","0.30160290039093873","11.674034185406523"
+"bat::assets::asset_from_contents","_<bugreport::collector::OperatingSystem_as_bugreport::collector::Collector>::collect","0.2948030066525672","13.90511356801286"
+"bat::assets::asset_from_contents","core::result::Result<T,E>::map_err","0.2822397977544462","9.05590648814534"
+14 "bat::assets::lazy_theme_set::_<impl_core::convert::TryFrom<bat::assets::lazy_theme_set::LazyThemeSet>for_syntect::highlighting::theme_set::ThemeSet>::try_from","core::iter::adapters::flatten::FlattenCompat<I,U>::iter_try_fold","0.2541170163347322","16.04038632250855"
+"bat::assets::lazy_theme_set::_<impl_core::convert::TryFrom<bat::assets::lazy_theme_set::LazyThemeSet>for_syntect::highlighting::theme_set::ThemeSet>::try_from","core::iter::adapters::flatten::FlattenCompat<I,U>::iter_try_fold","0.24991784231672742","16.02830499165017"
+"bat::assets::lazy_theme_set::_<impl_core::convert::TryFrom<bat::assets::lazy_theme_set::LazyThemeSet>for_syntect::highlighting::theme_set::ThemeSet>::try_from","bat::assets::lazy_theme_set::_<impl_core::convert::TryFrom<bat::assets::lazy_theme_set::LazyThemeSet>for_syntect::highlighting::theme_set::ThemeSet>::try_from","0.22568578638825593","10.585602483689996"
+"bat::assets::lazy_theme_set::_<impl_core::convert::TryFrom<bat::assets::lazy_theme_set::LazyThemeSet>for_syntect::highlighting::theme_set::ThemeSet>::try_from","_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter","0.225306259452663","11.127493026753534"
+"bat::assets::lazy_theme_set::_<impl_core::convert::TryFrom<bat::assets::lazy_theme_set::LazyThemeSet>for_syntect::highlighting::theme_set::ThemeSet>::try_from","git2::repo::Repository::discover","0.22406026183852368","10.81224344877161"
+15 "bat::assets::build_assets::acknowledgements::license_contains_marker","bat::assets::build_assets::acknowledgements::normalize_license_text","0.35739581087299266","21.129819767047817"
+"bat::assets::build_assets::acknowledgements::license_contains_marker","aho_corasick::util::search::_<impl_core::ops::index::Index<aho_corasick::util::search::Span>for[u8]>::index","0.25357201476690977","9.655977833838104"
+"bat::assets::build_assets::acknowledgements::license_contains_marker","aho_corasick::util::search::_<impl_core::ops::index::Index<aho_corasick::util::search::Span>for[u8]>::index","0.25357201476690977","9.655977833838104"
+"bat::assets::build_assets::acknowledgements::license_contains_marker","regex_automata::util::search::_<impl_core::ops::index::Index<regex_automata::util::search::Span>for[u8]>::index","0.25357201476690977","9.655977833838104"
+"bat::assets::build_assets::acknowledgements::license_contains_marker","_<T_as_alloc::slice::hack::ConvertVec>::to_vec","0.24154901889974822","12.72818899117652"
+16 "bat::assets::lazy_theme_set::LazyThemeSet::get","aho_corasick::packed::api::SearchKind::memory_usage","0.17541406552345093","4.068106246314345"
+"bat::assets::lazy_theme_set::LazyThemeSet::get","_<walkdir::error::Error_as_core::error::Error>::source","0.1741643924776342","4.359673633822953"
+"bat::assets::lazy_theme_set::LazyThemeSet::get","core::option::Option<T>::unwrap_or","0.17171986772707595","4.391090798398939"
+"bat::assets::lazy_theme_set::LazyThemeSet::get","core::option::Option<T>::unwrap_or","0.17171986772707595","4.391090798398939"
+"bat::assets::lazy_theme_set::LazyThemeSet::get","_<core::option::Option<T>as_core::cmp::PartialOrd>::partial_cmp","0.1661750682562759","4.837375725836553"
+17 "bat::assets::HighlightingAssets::default_theme","_<T_as_core::any::Any>::type_id","1.0000000000000002","10.102697049120216"
+"bat::assets::HighlightingAssets::default_theme","_<T_as_core::any::Any>::type_id","1.0000000000000002","10.102697049120216"
+"bat::assets::HighlightingAssets::default_theme","_<T_as_core::any::Any>::type_id","1.0000000000000002","10.102697049120216"
+"bat::assets::HighlightingAssets::default_theme","_<T_as_core::any::Any>::type_id","1.0000000000000002","10.102697049120216"
+"bat::assets::HighlightingAssets::default_theme","_<T_as_core::any::Any>::type_id","1.0000000000000002","10.102697049120216"
+18 "bat::assets::HighlightingAssets::from_cache","syntect::highlighting::theme_load::_<impl_syntect::highlighting::settings::ParseSettings_for_syntect::highlighting::theme::ThemeItem>::parse_settings","0.17430137051478597","1.8149166841679385"
+"bat::assets::HighlightingAssets::from_cache","git2::repo::Repository::discover","0.17338254517882734","4.529876346720035"
+"bat::assets::HighlightingAssets::from_cache","_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter","0.17132192186915227","4.499423287132479"
+"bat::assets::HighlightingAssets::from_cache","_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter","0.16272646294326815","2.887844130165507"
+"bat::assets::HighlightingAssets::from_cache","git2::repo::Repository::open","0.16002587896504936","1.9619327925114165"
+19 "bat::assets::HighlightingAssets::from_binary","alloc::string::String::with_capacity","0.35370784182835013","10.47730837013452"
+"bat::assets::HighlightingAssets::from_binary","alloc::string::String::with_capacity","0.35370784182835013","10.47730837013452"
+"bat::assets::HighlightingAssets::from_binary","alloc::string::String::with_capacity","0.35370784182835013","10.47730837013452"
+"bat::assets::HighlightingAssets::from_binary","alloc::string::String::with_capacity","0.35370784182835013","10.47730837013452"
+"bat::assets::HighlightingAssets::from_binary","alloc::string::String::with_capacity","0.35370784182835013","10.47730837013452"
+20 "bat::assets::HighlightingAssets::get_syntaxes","aho_corasick::packed::teddy::generic::FatMaskBuilder::from_teddy::_{{closure}}","0.30562545615056647","11.270635780576171"
+"bat::assets::HighlightingAssets::get_syntaxes","aho_corasick::packed::teddy::generic::FatMaskBuilder::from_teddy::_{{closure}}","0.30562545615056647","11.270635780576171"
+"bat::assets::HighlightingAssets::get_syntaxes","aho_corasick::packed::teddy::generic::FatMaskBuilder::from_teddy::_{{closure}}","0.30562545615056647","11.270635780576171"
+"bat::assets::HighlightingAssets::get_syntaxes","aho_corasick::packed::teddy::generic::FatMaskBuilder::from_teddy::_{{closure}}","0.30562545615056647","11.270635780576171"
+"bat::assets::HighlightingAssets::get_syntaxes","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.30562545615056647","11.270635780576171"
+21 "bat::assets::HighlightingAssets::themes","_<core::ops::control_flow::ControlFlow<B,C>as_core::ops::try_trait::Try>::branch","0.45782850247089046","14.071968660869521"
+"bat::assets::HighlightingAssets::themes","git_vector_pop","0.4409704810668355","11.290370196908505"
+"bat::assets::HighlightingAssets::themes","_<core::result::Result<T,E>as_core::ops::try_trait::Try>::branch","0.4335322645725639","13.645511009376992"
+"bat::assets::HighlightingAssets::themes","memchr::memmem::Finder::needle","0.42229940543905936","11.715028012539634"
+"bat::assets::HighlightingAssets::themes","memchr::memmem::Finder::needle","0.42229940543905936","11.715028012539634"
+22 "bat::syntax_mapping::ignored_suffixes::IgnoredSuffixes::try_with_stripped_suffix","preload_attr_file","0.22130829109573263","8.071241939531273"
+"bat::syntax_mapping::ignored_suffixes::IgnoredSuffixes::try_with_stripped_suffix","git_parse_peek","0.21986286176369055","8.225761397516884"
+"bat::syntax_mapping::ignored_suffixes::IgnoredSuffixes::try_with_stripped_suffix","normalize_options","0.216400075160527","7.729834893549955"
+"bat::syntax_mapping::ignored_suffixes::IgnoredSuffixes::try_with_stripped_suffix","core::str::_<impl_str>::trim_end_matches","0.20276273045627122","6.636618475258098"
+"bat::syntax_mapping::ignored_suffixes::IgnoredSuffixes::try_with_stripped_suffix","core::str::_<impl_str>::trim_end_matches","0.20276273045627122","6.636618475258098"
+23 "bat::assets::HighlightingAssets::get_theme","once_cell::sync::Lazy<T,F>::force::_{{closure}}","0.26382931629379347","7.783963369325833"
+"bat::assets::HighlightingAssets::get_theme","once_cell::sync::Lazy<T,F>::force::_{{closure}}","0.26382931629379347","7.783963369325833"
+"bat::assets::HighlightingAssets::get_theme","once_cell::sync::Lazy<T,F>::force::_{{closure}}","0.26382931629379347","7.783963369325833"
+"bat::assets::HighlightingAssets::get_theme","once_cell::sync::Lazy<T,F>::force::_{{closure}}","0.26382931629379347","7.783963369325833"
+"bat::assets::HighlightingAssets::get_theme","once_cell::sync::Lazy<T,F>::force::_{{closure}}","0.25323110250597064","7.560955151134855"
+24 "bat::assets::get_acknowledgements","hashbrown::raw::sse2::Group::convert_special_to_empty_and_full_to_deleted","0.2695501264083478","10.94781091794814"
+"bat::assets::get_acknowledgements","hashbrown::raw::sse2::Group::convert_special_to_empty_and_full_to_deleted","0.2695501264083478","10.94781091794814"
+"bat::assets::get_acknowledgements","hashbrown::raw::sse2::Group::convert_special_to_empty_and_full_to_deleted","0.2695501264083478","10.94781091794814"
+"bat::assets::get_acknowledgements","hashbrown::raw::sse2::Group::convert_special_to_empty_and_full_to_deleted","0.2695501264083478","10.94781091794814"
+"bat::assets::get_acknowledgements","hashbrown::raw::sse2::Group::convert_special_to_empty_and_full_to_deleted","0.2695501264083478","10.94781091794814"
+25 "bat::config::get_pager_executable","_<alloc::collections::btree::set::IntoIter<T,A>as_core::iter::traits::iterator::Iterator>::next","0.3519159677055299","10.963861625651063"
+"bat::config::get_pager_executable","core::iter::traits::iterator::Iterator::find_map::check::_{{closure}}","0.3519159677055299","10.963861625651063"
+"bat::config::get_pager_executable","core::iter::traits::iterator::Iterator::find_map::check::_{{closure}}","0.3519159677055299","10.963861625651063"
+"bat::config::get_pager_executable","_<core::iter::adapters::GenericShunt<I,R>as_core::iter::traits::iterator::Iterator>::next","0.3519159677055299","10.963861625651063"
+"bat::config::get_pager_executable","_<core::iter::adapters::GenericShunt<I,R>as_core::iter::traits::iterator::Iterator>::next","0.3519159677055299","10.963861625651063"
+26 "bat::pager::get_pager","bat::pager::PagerKind::from_bin","0.1967484923990246","8.117532335887716"
+"bat::pager::get_pager","bat::assets::build_assets::acknowledgements::normalize_license_text","0.18970548841600116","5.549427999509855"
+"bat::pager::get_pager","bat::pager::get_pager","0.185064522690012","8.268428895769356"
+"bat::pager::get_pager","regex_automata::meta::reverse_inner::extract","0.17299429535550453","3.875355064435806"
+"bat::pager::get_pager","_<serde::de::impls::<impl_serde::de::Deserialize_for_alloc::vec::Vec<T>>::deserialize::VecVisitor<T>as_serde::de::Visitor>::visit_seq","0.15990466173101808","2.534900302134548"
+27 "bat::pager::Pager::new","regex_automata::meta::strategy::Pre<P>::new","0.2233602469682653","8.579079286339777"
+"bat::pager::Pager::new","regex_automata::meta::strategy::Pre<P>::new","0.2217163596600008","8.751629451118124"
+"bat::pager::Pager::new","regex_automata::meta::strategy::Pre<P>::new","0.21929268285962594","8.992300974675878"
+"bat::pager::Pager::new","regex_automata::meta::strategy::Pre<P>::new","0.21929268285962594","8.992300974675878"
+"bat::pager::Pager::new","regex_automata::meta::strategy::Pre<P>::new","0.21929268285962594","8.992300974675878"
+28 "bat::controller::Controller::run","FUN_00332410","0.9999999999999999","9.77695099238368"
+"bat::controller::Controller::run","_<&&&&&&clap_builder::builder::value_parser::_AutoValueParser<P>as_clap_builder::builder::value_parser::via_prelude::_ValueParserViaFactory>::value_parser","0.9999999999999999","9.77695099238368"
+"bat::controller::Controller::run","_<&&&&&&clap_builder::builder::value_parser::_AutoValueParser<P>as_clap_builder::builder::value_parser::via_prelude::_ValueParserViaFactory>::value_parser","0.9999999999999999","9.77695099238368"
+"bat::controller::Controller::run","_<&linked_hash_map::LinkedHashMap<K,V,S>as_core::iter::traits::collect::IntoIterator>::into_iter","0.9999999999999999","9.77695099238368"
+"bat::controller::Controller::run","_<&mut_I_as_core::iter::traits::iterator::Iterator>::fold","0.9999999999999999","9.77695099238368"
+29 "bat::output::OutputType::from_mode","core::cmp::Ordering::reverse","0.3117179867291213","8.200612370215119"
+"bat::output::OutputType::from_mode","_<clircle::clircle_unix::UnixIdentifier_as_core::convert::TryFrom<clircle::Stdio>>::try_from","0.2969048733128259","7.978188541488624"
+"bat::output::OutputType::from_mode","core::panicking::assert_failed_inner","0.2679691184485072","8.563934403970315"
+"bat::output::OutputType::from_mode","git_error_set","0.2507406498621894","6.803067840032575"
+"bat::output::OutputType::from_mode","_<core::option::Option<T>as_core::clone::Clone>::clone","0.2480052074748063","8.298686528269918"
+30 "bat::error::default_error_handler","alloc::vec::Vec<T,A>::retain_mut","0.29851173018049526","10.995539662216975"
+"bat::error::default_error_handler","alloc::vec::Vec<T,A>::retain_mut","0.29214815754324674","10.471142133337683"
+"bat::error::default_error_handler","core::option::Option<core::result::Result<T,E>>::transpose","0.27214001979443136","11.12100646456592"
+"bat::error::default_error_handler","regex_syntax::ast::HexLiteralKind::digits","0.2693279192595393","7.793673244186951"
+"bat::error::default_error_handler","bat::error::default_error_handler","0.2662680655173139","10.698453767803322"
+31 "bat::diff::get_git_diff","regex_automata::meta::reverse_inner::extract","0.226654535593378","13.55694359688911"
+"bat::diff::get_git_diff","yaml_rust::yaml::YamlLoader::load_from_str","0.18442093623190295","5.214129010845572"
+"bat::diff::get_git_diff","clap_lex::split_nonutf8_once","0.1632917756780584","1.0178976202276315"
+"bat::diff::get_git_diff","_<serde_json::value::de::<impl_serde::de::Deserialize_for_serde_json::value::Value>::deserialize::ValueVisitor_as_serde::de::Visitor>::visit_map","0.1536103231085221","1.4685913619058608"
+32 "bat::style::StyleComponents::header","memchr::memchr::x86::sse2::memchr","0.3603265220267025","40.85144115873523"
+"bat::style::StyleComponents::header","core::option::Option<T>::as_ref","0.32678928605889","11.323835668792956"
+"bat::style::StyleComponents::header","core::option::Option<T>::as_ref","0.32678928605889","11.323835668792956"
+"bat::style::StyleComponents::header","_<core::option::Option<T>as_core::fmt::Debug>::fmt","0.3234787424333728","10.641794147426584"
+"bat::style::StyleComponents::header","_<core::option::Option<T>as_core::fmt::Debug>::fmt","0.3234787424333728","10.641794147426584"
+33 "bat::vscreen::AnsiStyle::update","panic_unwind::__rust_panic_cleanup","0.2772150257929017","6.171962076529314"
+"bat::vscreen::AnsiStyle::update","core::option::Option<T>::get_or_insert_with","0.26018756170509555","6.944352156395765"
+"bat::vscreen::AnsiStyle::update","regex_automata::nfa::thompson::compiler::Utf8Compiler::pop_freeze","0.22759474208190633","3.606395168610331"
+"bat::vscreen::AnsiStyle::update","alloc::collections::btree::map::BTreeMap<K,V,A>::entry","0.21364610355386277","4.697053951577584"
+"bat::vscreen::AnsiStyle::update","alloc::collections::btree::map::BTreeMap<K,V,A>::entry","0.21364610355386277","4.697053951577584"
+34 "bat::style::StyleComponents::plain","core::core_simd::masks::mask_impl::Mask<T,_>::to_bitmask_integer","0.2148171062349421","1.2128584449802036"
+"bat::style::StyleComponents::plain","core::core_simd::masks::mask_impl::Mask<T,_>::to_bitmask_integer","0.2148171062349421","1.2128584449802036"
+"bat::style::StyleComponents::plain","core::core_simd::masks::mask_impl::Mask<T,_>::to_bitmask_integer","0.2148171062349421","1.2128584449802036"
+"bat::style::StyleComponents::plain","core::core_simd::masks::mask_impl::Mask<T,_>::to_bitmask_integer","0.2148171062349421","1.2128584449802036"
+35 "bat::printer::OutputHandle::write_fmt","bat::printer::OutputHandle::write_fmt","0.33817078448573307","12.875878846672018"
+"bat::printer::OutputHandle::write_fmt","core::result::Result<T,E>::unwrap_or_else","0.30775010557220284","10.200191862834064"
+"bat::printer::OutputHandle::write_fmt","_<core::ops::range::Bound<T>as_core::clone::Clone>::clone","0.3040969361013661","10.192968627149389"
+"bat::printer::OutputHandle::write_fmt","core::result::Result<T,E>::map_err","0.3016690247132428","9.98463461031525"
+"bat::printer::OutputHandle::write_fmt","alloc::borrow::Cow<B>::into_owned","0.3005702370771557","10.185866237232998"
+36 "bat::printer::InteractivePrinter::preprocess","_<u8_as_alloc::vec::spec_from_elem::SpecFromElem>::from_elem","0.3347169228160961","15.933287003726619"
+"bat::printer::InteractivePrinter::preprocess","core::result::Result<T,E>::map_err","0.31016612788124576","11.46702486452353"
+"bat::printer::InteractivePrinter::preprocess","core::result::Result<T,E>::map_err","0.31016612788124576","11.46702486452353"
+"bat::printer::InteractivePrinter::preprocess","core::result::Result<T,E>::map_err","0.31016612788124576","11.46702486452353"
+"bat::printer::InteractivePrinter::preprocess","regex_automata::hybrid::dfa::DFA::try_search_fwd::_{{closure}}","0.3039356516449964","12.436468852169467"
+37 "bat::terminal::as_terminal_escaped","_<u8_as_alloc::vec::spec_from_elem::SpecFromElem>::from_elem","0.2831084703903748","14.647069751657206"
+"bat::terminal::as_terminal_escaped","_<T_as_alloc::vec::spec_from_elem::SpecFromElem>::from_elem","0.2459369639398629","12.588710409680534"
+"bat::terminal::as_terminal_escaped","_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter","0.23768596243668544","9.917988745297453"
+"bat::terminal::as_terminal_escaped","_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter","0.23768596243668544","9.917988745297453"
+"bat::terminal::as_terminal_escaped","_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter","0.23768596243668544","9.917988745297453"
+38 "bat::vscreen::AnsiStyle::to_reset_sequence","_<core::iter::sources::once::Once<T>as_core::iter::traits::iterator::Iterator>::size_hint","0.40111447208996753","13.5663989859362"
+"bat::vscreen::AnsiStyle::to_reset_sequence","_<core::iter::adapters::take::Take<I>as_core::iter::traits::iterator::Iterator>::size_hint","0.3893063127865755","15.680340687646204"
+"bat::vscreen::AnsiStyle::to_reset_sequence","_<core::iter::adapters::take::Take<I>as_core::iter::traits::iterator::Iterator>::size_hint","0.3893063127865755","15.680340687646204"
+"bat::vscreen::AnsiStyle::to_reset_sequence","_<core::iter::adapters::take::Take<I>as_core::iter::traits::iterator::Iterator>::size_hint","0.3893063127865755","15.680340687646204"
+"bat::vscreen::AnsiStyle::to_reset_sequence","_<core::iter::adapters::take::Take<I>as_core::iter::traits::iterator::Iterator>::size_hint","0.3893063127865755","15.680340687646204"
+39 "bat::terminal::to_ansi_color","bat::terminal::to_ansi_color","0.24163037386879943","13.218552895128244"
+"bat::terminal::to_ansi_color","code_to_mbclen","0.19004696192700687","6.820159867068724"
+"bat::terminal::to_ansi_color","encoding_rs::Decoder::decode_to_utf8_without_replacement","0.17576084602862346","4.651159208931042"
+"bat::terminal::to_ansi_color","encoding_rs::Decoder::max_utf8_buffer_length","0.17576084602862346","4.651159208931042"
+"bat::terminal::to_ansi_color","encoding_rs::Decoder::max_utf8_buffer_length_without_replacement","0.17576084602862346","4.651159208931042"
+40 "bat::vscreen::Attributes::update","_<bat::vscreen::EscapeSequenceIterator_as_core::iter::traits::iterator::Iterator>::next::_{{closure}}","0.9999999999999999","18.88684737161034"
+"bat::vscreen::Attributes::update","_<clap_builder::builder::value_parser::ValueParser_as_core::clone::Clone>::clone","0.9999999999999999","18.88684737161034"
+"bat::vscreen::Attributes::update","_<regex_syntax::ast::Ast_as_core::ops::drop::Drop>::drop","0.9999999999999999","18.88684737161034"
+"bat::vscreen::Attributes::update","_<regex_syntax::ast::parse::NestLimiter<P>as_regex_syntax::ast::visitor::Visitor>::visit_pre","0.9999999999999999","18.88684737161034"
+"bat::vscreen::Attributes::update","_<regex_syntax::hir::translate::TranslatorI_as_regex_syntax::ast::visitor::Visitor>::visit_post","0.9999999999999999","18.88684737161034"
+41 "bat::vscreen::Attributes::update_with_charset","core::ptr::drop_in_place<aho_corasick::nfa::noncontiguous::NFA>","0.4956903264453397","12.123910521681658"
+"bat::vscreen::Attributes::update_with_charset","core::ptr::drop_in_place<regex_automata::nfa::thompson::range_trie::RangeTrie>","0.4956903264453397","12.123910521681658"
+"bat::vscreen::Attributes::update_with_charset","core::ptr::drop_in_place<syntect::parsing::syntax_set::SyntaxReference>","0.4956903264453397","12.123910521681658"
+"bat::vscreen::Attributes::update_with_charset","core::ptr::drop_in_place<yaml_rust::parser::Parser<core::str::iter::Chars>>","0.4956903264453397","12.123910521681658"
+"bat::vscreen::Attributes::update_with_charset","core::ptr::drop_in_place<bat::decorations::LineChangesDecoration>","0.41282642734508695","10.146998602479533"
+42 "bat::vscreen::Attributes::parse_color","git_fs_path_is_dot_or_dotdot","0.21164638908085925","5.563962664014405"
+"bat::vscreen::Attributes::parse_color","git_fs_path_is_relative","0.21164638908085925","5.563962664014405"
+"bat::vscreen::Attributes::parse_color","git_fs_path_is_relative","0.21164638908085925","5.563962664014405"
+"bat::vscreen::Attributes::parse_color","hashbrown::raw::sse2::Group::convert_special_to_empty_and_full_to_deleted","0.20238524496882176","5.114857369300423"
+"bat::vscreen::Attributes::parse_color","hashbrown::raw::sse2::Group::convert_special_to_empty_and_full_to_deleted","0.20238524496882176","5.114857369300423"
+43 "bat::vscreen::join","core::ptr::drop_in_place<regex_automata::nfa::thompson::compiler::Compiler>","0.4385967574208051","9.341533720853416"
+"bat::vscreen::join","bugreport::BugReport::format","0.4333894459604869","9.474303234930446"
+"bat::vscreen::join","_<regex_automata::meta::strategy::Core_as_regex_automata::meta::strategy::Strategy>::reset_cache","0.41620683956379295","9.134105338963034"
+"bat::vscreen::join","_<regex_automata::meta::strategy::ReverseAnchored_as_regex_automata::meta::strategy::Strategy>::reset_cache","0.41620683956379295","9.134105338963034"
+"bat::vscreen::join","_<regex_automata::meta::strategy::ReverseSuffix_as_regex_automata::meta::strategy::Strategy>::reset_cache","0.41620683956379295","9.134105338963034"
+44 "bat::printer::InteractivePrinter::print_horizontal_line","bat::printer::InteractivePrinter::print_horizontal_line","0.22468278410556963","10.460422339573107"
+"bat::printer::InteractivePrinter::print_horizontal_line","bat::printer::OutputHandle::write_fmt","0.1976144057709256","3.7822746729439283"
+"bat::printer::InteractivePrinter::print_horizontal_line","git_error_set","0.17797034230957276","0.9470903846719692"
+"bat::printer::InteractivePrinter::print_horizontal_line","bat::printer::InteractivePrinter::create_fake_panel","0.157484460561262","1.5039320833627263"
+"bat::printer::InteractivePrinter::print_horizontal_line","bat::printer::InteractivePrinter::print_header_component_indent","0.15712956409730242","0.9414898079554499"
+45 "bat::printer::InteractivePrinter::print_horizontal_line_term","bat::printer::OutputHandle::write_fmt","0.3080575776674559","13.286655650956622"
+"bat::printer::InteractivePrinter::print_horizontal_line_term","linked_hash_map::LinkedHashMap<K,V,S>::attach","0.2321539285128151","7.518571510481778"
+"bat::printer::InteractivePrinter::print_horizontal_line_term","linked_hash_map::LinkedHashMap<K,V,S>::detach","0.2276226574754609","6.573862249725767"
+"bat::printer::InteractivePrinter::print_horizontal_line_term","_<core::iter::adapters::filter_map::FilterMap<I,F>as_core::iter::traits::iterator::Iterator>::fold","0.2272566610162097","6.246841584173389"
+"bat::printer::InteractivePrinter::print_horizontal_line_term","_<core::iter::adapters::map::Map<I,F>as_core::iter::traits::iterator::Iterator>::fold","0.2272566610162097","6.246841584173389"
+46 "bat::input::InputDescription::summary","core::ptr::drop_in_place<(gimli::read::UnitOffset<usize>,_addr2line::lazy::LazyCell<core::result::Result<addr2line::function::Function<gimli::read::endian_slice::EndianSlice<gimli::endianity::LittleEndian>>,_gimli::read::Error>>)>","0.3144397065088514","10.61958174838567"
+"bat::input::InputDescription::summary","core::option::Option<T>::as_ref","0.2939940364766148","7.976382357979212"
+"bat::input::InputDescription::summary","_<core::iter::adapters::take::Take<I>as_core::iter::traits::iterator::Iterator>::size_hint","0.2698458037720384","10.718791465242202"
+"bat::input::InputDescription::summary","_<core::iter::adapters::take::Take<I>as_core::iter::traits::iterator::Iterator>::size_hint","0.2698458037720384","10.718791465242202"
+"bat::input::InputDescription::summary","_<core::iter::adapters::take::Take<I>as_core::iter::traits::iterator::Iterator>::size_hint","0.2698458037720384","10.718791465242202"
+47 "bat::printer::InteractivePrinter::print_header_component_with_indent","core::option::Option<T>::as_ref","0.26780561614103604","7.621025166356776"
+"bat::printer::InteractivePrinter::print_header_component_with_indent","core::option::Option<T>::as_ref","0.26780561614103604","7.621025166356776"
+"bat::printer::InteractivePrinter::print_header_component_with_indent","_<core::option::Option<T>as_core::fmt::Debug>::fmt","0.2650926074433346","6.93978488684884"
+"bat::printer::InteractivePrinter::print_header_component_with_indent","_<core::option::Option<T>as_core::fmt::Debug>::fmt","0.2650926074433346","6.93978488684884"
+"bat::printer::InteractivePrinter::print_header_component_with_indent","core::option::Option<T>::is_some","0.26266058940015524","5.605817545294939"
+48 "bat::decorations::LineChangesDecoration::generate_cached","bat::decorations::GridBorderDecoration::new","0.3296266728906577","11.762815484810023"
+"bat::decorations::LineChangesDecoration::generate_cached","core::iter::traits::iterator::Iterator::eq_by","0.3197405824620025","7.840391416548529"
+"bat::decorations::LineChangesDecoration::generate_cached","core::iter::traits::iterator::Iterator::eq_by","0.3177310603193752","10.093099255248418"
+"bat::decorations::LineChangesDecoration::generate_cached","alloc::vec::Vec<T,A>::extend_trusted","0.2969724528677619","10.543635098384215"
+"bat::decorations::LineChangesDecoration::generate_cached","alloc::vec::Vec<T,A>::extend_trusted","0.2969724528677619","10.543635098384215"
+49 "bat::diff::get_git_diff::_{{closure}}","FUN_00178932","0.9999999999999998","8.589937289120217"
+"bat::diff::get_git_diff::_{{closure}}","FUN_0039e632","0.9999999999999998","8.589937289120217"
+"bat::diff::get_git_diff::_{{closure}}","_<T_as_core::array::equality::SpecArrayEq<U,_>>::spec_eq","0.9999999999999998","8.589937289120217"
+"bat::diff::get_git_diff::_{{closure}}","_<aho_corasick::packed::api::MatchKind_as_core::default::Default>::default","0.9999999999999998","8.589937289120217"
+"bat::diff::get_git_diff::_{{closure}}","_<aho_corasick::util::search::MatchKind_as_core::default::Default>::default","0.9999999999999998","8.589937289120217"
+50 "bat::input::InputReader::new","gimli::read::abbrev::Attributes::push","0.29090986716308304","15.761580968094616"
+"bat::input::InputReader::new","_<std::path::Component_as_core::convert::AsRef<std::ffi::os_str::OsStr>>::as_ref","0.25332391001969196","6.69402763161869"
+"bat::input::InputReader::new","core::ops::function::FnOnce::call_once","0.25332391001969196","6.69402763161869"
+"bat::input::InputReader::new","core::panicking::panic_nounwind_fmt","0.243426803771499","6.48571323475587"
+"bat::input::InputReader::new","core::iter::adapters::try_process","0.24325308871410878","10.045237494282688"
+51 "bat::input::InputReader::new","gimli::read::abbrev::Attributes::push","0.28475816361705547","14.761005109973748"
+"bat::input::InputReader::new","core::panicking::panic_nounwind_fmt","0.2466613889566211","6.811896121233905"
+"bat::input::InputReader::new","_<std::path::Component_as_core::convert::AsRef<std::ffi::os_str::OsStr>>::as_ref","0.23505782606142617","5.973168560629719"
+"bat::input::InputReader::new","core::ops::function::FnOnce::call_once","0.23505782606142617","5.973168560629719"
+"bat::input::InputReader::new","core::iter::adapters::try_process","0.2333655805367425","8.975595457851902"
+52 "bat::input::InputReader::new","std::panicking::begin_panic_handler::take_box","0.23012328455191222","7.392828131344572"
+"bat::input::InputReader::new","std::io::error::Error::_new","0.20201931218196836","6.395081500519166"
+"bat::input::InputReader::new","std::io::stdio::_print","0.1930572267833906","6.746989310297321"
+"bat::input::InputReader::new","std::io::stdio::_eprint","0.1916554538729045","6.569608650320745"
+"bat::input::InputReader::new","std::process::Command::output","0.18107785606354757","6.475213302144597"
+53 "bat::input::InputReader::new","submodule_load_from_wd_lite","0.25873093904063393","10.118762181069165"
+"bat::input::InputReader::new","alloc::vec::Vec<T,A>::retain_mut","0.23527603822789867","7.932443073079878"
+"bat::input::InputReader::new","anstyle_query::term_supports_color","0.22735858495008504","7.777000993546732"
+"bat::input::InputReader::new","alloc::vec::Vec<T,A>::retain_mut","0.22603195910124493","7.374890648371578"
+"bat::input::InputReader::new","core::iter::adapters::try_process","0.21395338101610428","6.068298905903283"
+54 "bat::output::OutputType::try_pager","alloc::collections::btree::navigate::_<impl_alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut,K,V,alloc::collections::btree::node::marker::Leaf>,alloc::collections::btree::node::marker::Edge>>::next_unchecked::_{{closure}}","0.17070975754427878","2.2469604502058305"
+"bat::output::OutputType::try_pager","alloc::collections::btree::navigate::_<impl_alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut,K,V,alloc::collections::btree::node::marker::Leaf>,alloc::collections::btree::node::marker::Edge>>::next_unchecked::_{{closure}}","0.17070975754427878","2.2469604502058305"
+"bat::output::OutputType::try_pager","alloc::collections::btree::navigate::_<impl_alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut,K,V,alloc::collections::btree::node::marker::Leaf>,alloc::collections::btree::node::marker::Edge>>::next_unchecked::_{{closure}}","0.17070975754427878","2.2469604502058305"
+"bat::output::OutputType::try_pager","alloc::collections::btree::navigate::_<impl_alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut,K,V,alloc::collections::btree::node::marker::Leaf>,alloc::collections::btree::node::marker::Edge>>::next_unchecked::_{{closure}}","0.17070975754427878","2.2469604502058305"
+"bat::output::OutputType::try_pager","_<aho_corasick::packed::teddy::generic::FatMaskBuilder_as_core::fmt::Debug>::fmt","0.16318627380785997","4.708081984483036"
+55 "bat::input::InputDescription::set_kind","core::core_arch::x86::sse2::_mm_store_si128","0.5446499761927304","13.851663976041028"
+"bat::input::InputDescription::set_kind","core::core_arch::x86::sse2::_mm_store_si128","0.5446499761927304","13.851663976041028"
+"bat::input::InputDescription::set_kind","core::core_arch::x86::sse2::_mm_store_si128","0.5446499761927304","13.851663976041028"
+"bat::input::InputDescription::set_kind","core::core_arch::x86::sse2::_mm_store_si128","0.5446499761927304","13.851663976041028"
+"bat::input::InputDescription::set_kind","core::core_arch::x86::sse2::_mm_store_si128","0.5446499761927304","13.851663976041028"
+56 "bat::input::Input::_ordinary_file","aho_corasick::packed::teddy::generic::FatMaskBuilder::from_teddy::_{{closure}}","0.2721196392656922","9.178431979796937"
+"bat::input::Input::_ordinary_file","aho_corasick::packed::teddy::generic::FatMaskBuilder::from_teddy::_{{closure}}","0.2721196392656922","9.178431979796937"
+"bat::input::Input::_ordinary_file","aho_corasick::packed::teddy::generic::FatMaskBuilder::from_teddy::_{{closure}}","0.2721196392656922","9.178431979796937"
+"bat::input::Input::_ordinary_file","aho_corasick::packed::teddy::generic::FatMaskBuilder::from_teddy::_{{closure}}","0.2721196392656922","9.178431979796937"
+"bat::input::Input::_ordinary_file","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.2721196392656922","9.178431979796937"
+57 "bat::input::InputKind::description","core::ptr::drop_in_place<quick_xml::escapei::EscapeError>","0.3683873495310964","14.078848204394507"
+"bat::input::InputKind::description","core::ptr::drop_in_place<plist::stream::ReaderInner<&mut_std::io::buffered::bufreader::BufReader<std::fs::File>>>","0.3618922206151821","14.419929230571189"
+"bat::input::InputKind::description","core::ptr::drop_in_place<regex_syntax::ast::GroupKind>","0.3618922206151821","14.419929230571189"
+"bat::input::InputKind::description","bat::input::InputKind::description","0.3540276164795861","15.499327160269441"
+"bat::input::InputKind::description","core::ptr::drop_in_place<bat::input::InputKind>","0.35006142804186335","13.981455747091918"
+58 "bat::input::Input::stdin","core::core_arch::x86::m256iExt::as_i32x8","0.4914861510709669","11.955633853632662"
+"bat::input::Input::stdin","core::core_arch::x86::m256iExt::as_i64x4","0.4914861510709669","11.955633853632662"
+"bat::input::Input::stdin","core::core_arch::x86::m256iExt::as_i8x32","0.4914861510709669","11.955633853632662"
+"bat::input::Input::stdin","core::core_arch::x86::m256iExt::as_u16x16","0.4914861510709669","11.955633853632662"
+"bat::input::Input::stdin","core::core_arch::x86::m256iExt::as_u8x32","0.4914861510709669","11.955633853632662"
+59 "bat::input::Input::from_reader","core::core_arch::x86::m256iExt::as_i32x8","0.4626310110181719","11.783209455684673"
+"bat::input::Input::from_reader","core::core_arch::x86::m256iExt::as_i64x4","0.4626310110181719","11.783209455684673"
+"bat::input::Input::from_reader","core::core_arch::x86::m256iExt::as_i8x32","0.4626310110181719","11.783209455684673"
+"bat::input::Input::from_reader","core::core_arch::x86::m256iExt::as_u16x16","0.4626310110181719","11.783209455684673"
+"bat::input::Input::from_reader","core::core_arch::x86::m256iExt::as_u8x32","0.4626310110181719","11.783209455684673"
+60 "bat::input::Input::_with_name","bat::assets::build_assets::acknowledgements::normalize_license_text","0.26720697534717924","12.200321088183244"
+"bat::input::Input::_with_name","alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Mut,K,V,alloc::collections::btree::node::marker::Internal>::correct_childrens_parent_links","0.250694273572384","8.344860123795819"
+"bat::input::Input::_with_name","alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Mut,K,V,alloc::collections::btree::node::marker::Internal>::correct_childrens_parent_links","0.250694273572384","8.344860123795819"
+"bat::input::Input::_with_name","alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Mut,K,V,alloc::collections::btree::node::marker::Internal>::correct_childrens_parent_links","0.250694273572384","8.344860123795819"
+"bat::input::Input::_with_name","alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Mut,K,V,alloc::collections::btree::node::marker::Internal>::correct_childrens_parent_links","0.250694273572384","8.344860123795819"
+61 "bat::line_range::LineRanges::from","alloc::vec::in_place_collect::write_in_place_with_drop::_{{closure}}","0.34111121668031125","12.916275425346845"
+"bat::line_range::LineRanges::from","alloc::vec::in_place_collect::write_in_place_with_drop::_{{closure}}","0.34111121668031125","12.916275425346845"
+"bat::line_range::LineRanges::from","_<core::core_arch::x86::__m128i_as_core::core_arch::x86::m128iExt>::as_m128i","0.3084146448461974","10.014529165072213"
+"bat::line_range::LineRanges::from","_<core::core_arch::x86::__m128i_as_core::core_arch::x86::m128iExt>::as_m128i","0.3084146448461974","10.014529165072213"
+"bat::line_range::LineRanges::from","_<core::core_arch::x86::__m128i_as_core::core_arch::x86::m128iExt>::as_m128i","0.3084146448461974","10.014529165072213"
+62 "bat::style::StyleComponent::components","anstream::auto::AutoStream<S>::new","1.0","19.311611506761423"
+"bat::style::StyleComponent::components","anstream::auto::AutoStream<S>::new","1.0","19.311611506761423"
+"bat::style::StyleComponent::components","anstyle::color::Ansi256Color::from_ansi","1.0","19.311611506761423"
+"bat::style::StyleComponent::components","bat::style::StyleComponent::components","1.0","19.311611506761423"
+"bat::style::StyleComponent::components","clap_builder::error::kind::ErrorKind::as_str","1.0","19.311611506761423"
+63 "bat::style::StyleComponents::new","core::core_arch::x86::avx::_mm256_setzero_si256","0.28539047484234153","8.767543583152523"
+"bat::style::StyleComponents::new","aho_corasick::util::special::Special::zero","0.24210467214100428","5.882658615006864"
+"bat::style::StyleComponents::new","core::core_arch::x86::sse2::_mm_setzero_si128","0.24210467214100428","5.882658615006864"
+"bat::style::StyleComponents::new","core::core_arch::x86::sse2::_mm_setzero_si128","0.24210467214100428","5.882658615006864"
+"bat::style::StyleComponents::new","core::core_arch::x86::sse2::_mm_setzero_si128","0.24210467214100428","5.882658615006864"
+64 "bat::style::StyleComponents::grid","memchr::memchr::x86::sse2::memchr","0.3248353393140245","16.81220007137583"
+"bat::style::StyleComponents::grid","core::option::Option<T>::as_ref","0.3100850751427466","12.871106558763348"
+"bat::style::StyleComponents::grid","core::option::Option<T>::as_ref","0.3100850751427466","12.871106558763348"
+"bat::style::StyleComponents::grid","_<core::option::Option<T>as_core::fmt::Debug>::fmt","0.3069437537693866","12.190915285452181"
+"bat::style::StyleComponents::grid","_<core::option::Option<T>as_core::fmt::Debug>::fmt","0.3069437537693866","12.190915285452181"
+65 "bat::style::StyleComponentList::expand_into","encoding_rs::Decoder::decode_to_utf8_without_replacement","0.34688591100158594","10.116602667615048"
+"bat::style::StyleComponentList::expand_into","encoding_rs::Decoder::max_utf8_buffer_length","0.34688591100158594","10.116602667615048"
+"bat::style::StyleComponentList::expand_into","encoding_rs::Decoder::max_utf8_buffer_length_without_replacement","0.34688591100158594","10.116602667615048"
+"bat::style::StyleComponentList::expand_into","quick_xml::reader::Reader<R>::read_event_impl","0.34688591100158594","10.116602667615048"
+"bat::style::StyleComponentList::expand_into","yaml_rust::parser::Parser<T>::state_machine","0.34688591100158594","10.116602667615048"
+66 "bat::style::StyleComponentList::contains_override","miniz_oxide::inflate::output_buffer::OutputBuffer::bytes_left","0.31282245817708365","8.428858765007408"
+"bat::style::StyleComponentList::contains_override","_<&alloc::vec::Vec<T,A>as_core::iter::traits::collect::IntoIterator>::into_iter","0.28643824053857825","8.216613052787334"
+"bat::style::StyleComponentList::contains_override","_<&alloc::vec::Vec<T,A>as_core::iter::traits::collect::IntoIterator>::into_iter","0.28643824053857825","8.216613052787334"
+"bat::style::StyleComponentList::contains_override","_<&alloc::vec::Vec<T,A>as_core::iter::traits::collect::IntoIterator>::into_iter","0.28643824053857825","8.216613052787334"
+"bat::style::StyleComponentList::contains_override","_<&alloc::vec::Vec<T,A>as_core::iter::traits::collect::IntoIterator>::into_iter","0.28643824053857825","8.216613052787334"
+67 "bat::syntax_mapping::SyntaxMapping::new","FUN_00332410","0.9999999999999999","9.77695099238368"
+"bat::syntax_mapping::SyntaxMapping::new","_<&&&&&&clap_builder::builder::value_parser::_AutoValueParser<P>as_clap_builder::builder::value_parser::via_prelude::_ValueParserViaFactory>::value_parser","0.9999999999999999","9.77695099238368"
+"bat::syntax_mapping::SyntaxMapping::new","_<&&&&&&clap_builder::builder::value_parser::_AutoValueParser<P>as_clap_builder::builder::value_parser::via_prelude::_ValueParserViaFactory>::value_parser","0.9999999999999999","9.77695099238368"
+"bat::syntax_mapping::SyntaxMapping::new","_<&linked_hash_map::LinkedHashMap<K,V,S>as_core::iter::traits::collect::IntoIterator>::into_iter","0.9999999999999999","9.77695099238368"
+"bat::syntax_mapping::SyntaxMapping::new","_<&mut_I_as_core::iter::traits::iterator::Iterator>::fold","0.9999999999999999","9.77695099238368"
+68 "bat::syntax_mapping::SyntaxMapping::start_offload_build_all","core::ptr::drop_in_place<addr2line::SupUnit<gimli::read::endian_slice::EndianSlice<gimli::endianity::LittleEndian>>>","0.3340916032506894","12.629578637985542"
+"bat::syntax_mapping::SyntaxMapping::start_offload_build_all","core::ptr::drop_in_place<gimli::read::dwarf::Unit<gimli::read::endian_slice::EndianSlice<gimli::endianity::LittleEndian>,_usize>>","0.3340916032506894","12.629578637985542"
+"bat::syntax_mapping::SyntaxMapping::start_offload_build_all","core::ptr::drop_in_place<std::sys::thread_local::fast_local::lazy::State<core::cell::Cell<core::option::Option<alloc::sync::Arc<std::sync::mutex::Mutex<alloc::vec::Vec<u8,_alloc::alloc::Global>>,_alloc::alloc::Global>>>,_()>>","0.32643243480737916","13.533484383221484"
+"bat::syntax_mapping::SyntaxMapping::start_offload_build_all","std::io::stdio::set_output_capture","0.31293053119717257","14.967514486256551"
+"bat::syntax_mapping::SyntaxMapping::start_offload_build_all","core::ptr::drop_in_place<alloc::sync::ArcInner<gimli::read::dwarf::Dwarf<gimli::read::endian_slice::EndianSlice<gimli::endianity::LittleEndian>>>>","0.3001574644430515","11.442481816100852"
+69 "bat::syntax_mapping::SyntaxMapping::insert","core::core_arch::x86::m256iExt::as_i32x8","0.3073923420305563","8.882948660390568"
+"bat::syntax_mapping::SyntaxMapping::insert","core::core_arch::x86::m256iExt::as_i64x4","0.3073923420305563","8.882948660390568"
+"bat::syntax_mapping::SyntaxMapping::insert","core::core_arch::x86::m256iExt::as_i8x32","0.3073923420305563","8.882948660390568"
+"bat::syntax_mapping::SyntaxMapping::insert","core::core_arch::x86::m256iExt::as_u16x16","0.3073923420305563","8.882948660390568"
+"bat::syntax_mapping::SyntaxMapping::insert","core::core_arch::x86::m256iExt::as_u8x32","0.3073923420305563","8.882948660390568"
+70 "bat::syntax_mapping::SyntaxMapping::all_mappings","miniz_oxide::inflate::output_buffer::OutputBuffer::bytes_left","0.5934737892862642","11.079884396892208"
+"bat::syntax_mapping::SyntaxMapping::all_mappings","_<alloc::vec::Vec<T,A>as_core::iter::traits::collect::IntoIterator>::into_iter","0.5791492100768547","13.410936484781395"
+"bat::syntax_mapping::SyntaxMapping::all_mappings","_<alloc::vec::Vec<T,A>as_core::iter::traits::collect::IntoIterator>::into_iter","0.5791492100768547","13.410936484781395"
+"bat::syntax_mapping::SyntaxMapping::all_mappings","_<alloc::vec::Vec<T,A>as_core::iter::traits::collect::IntoIterator>::into_iter","0.5791492100768547","13.410936484781395"
+"bat::syntax_mapping::SyntaxMapping::all_mappings","_<alloc::vec::Vec<T,A>as_core::iter::traits::collect::IntoIterator>::into_iter","0.5791492100768547","13.410936484781395"
+71 "bat::syntax_mapping::SyntaxMapping::insert_ignored_suffix","alloc::vec::Vec<T,A>::push","0.6023216852537249","16.997072321715137"
+"bat::syntax_mapping::SyntaxMapping::insert_ignored_suffix","alloc::vec::Vec<T,A>::push","0.6023216852537249","16.997072321715137"
+"bat::syntax_mapping::SyntaxMapping::insert_ignored_suffix","alloc::vec::Vec<T,A>::push","0.6023216852537249","16.997072321715137"
+"bat::syntax_mapping::SyntaxMapping::insert_ignored_suffix","alloc::vec::Vec<T,A>::push","0.6023216852537249","16.997072321715137"
+"bat::syntax_mapping::SyntaxMapping::insert_ignored_suffix","alloc::vec::Vec<T,A>::push","0.6023216852537249","16.997072321715137"

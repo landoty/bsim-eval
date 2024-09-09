@@ -1,48 +1,172 @@
-bat-O0-x64.mv.db,/Users/landen/Research/bsim/bins/bat/x64/bat-O2,0.0,0.9
-_<core::option::Option<T>as_core::fmt::Debug>::fmt,bat::printer::OutputHandle::write_fmt,0.3996490397685844,14.119217015230507
-bat::main,bat::main,0.32564087332132313,16.274144831062458
-_<aho_corasick::nfa::noncontiguous::NFA_as_aho_corasick::automaton::Automaton>::prefilter,bat::input::InputDescription::title,0.710833634970037,12.807804239626147
-_<aho_corasick::nfa::contiguous::NFA_as_aho_corasick::automaton::Automaton>::prefilter,bat::input::InputDescription::title,0.710833634970037,12.807804239626147
-_<aho_corasick::dfa::DFA_as_aho_corasick::automaton::Automaton>::prefilter,bat::input::InputDescription::title,0.710833634970037,12.807804239626147
-_<aho_corasick::packed::api::SearchKind_as_core::fmt::Debug>::fmt,bat::printer::OutputHandle::write_fmt,0.3996490397685844,14.119217015230507
-_<core::option::Option<T>as_core::fmt::Debug>::fmt,bat::printer::OutputHandle::write_fmt,0.3996490397685844,14.119217015230507
-bat::assets::build_assets::acknowledgements::license_contains_marker,bat::assets::build_assets::acknowledgements::normalize_license_text,0.22916681094474547,10.060193839208868
-core::ptr::drop_in_place<std::io::Write::write_fmt::Adapter<std::fs::File>>,bat::input::InputDescription::title,0.4617172087689688,9.474143257338303
-bat::assets::get_acknowledgements,bat::assets::build_assets::acknowledgements::normalize_license_text,0.15895617009590773,3.996468354533219
-bat::error::default_error_handler,bat::error::default_error_handler,0.22984442783067155,8.930297255846801
-_<std::io::buffered::bufreader::BufReader<R>as_std::io::BufRead>::fill_buf,bat::clap_app::build_app::_{{closure}}::_{{closure}},0.3331400141132695,12.371614318105578
-_<bat::style::StyleComponentList_as_core::str::traits::FromStr>::from_str,bat::input::Input::_with_name,0.19921344943100064,6.8917641769080085
-_<bugreport::collector::CommandLine_as_bugreport::collector::Collector>::collect,bat::vscreen::Attributes::update_with_charset,0.12898437420065528,1.5248239571883548
-anstream::auto::AutoStream<S>::new,bat::style::StyleComponent::components,1.0,19.311611506761423
-anstream::auto::AutoStream<S>::new,bat::style::StyleComponent::components,1.0,19.311611506761423
-encoding_rs::Encoding::new_variant_decoder,bat::style::StyleComponent::components,1.0,19.311611506761423
-nu_ansi_term::ansi::_<impl_nu_ansi_term::style::Style>::write_prefix::_{{closure}},bat::printer::OutputHandle::write_fmt,0.33661082222893873,12.562762325972699
-_<time::error::format::Format_as_core::fmt::Debug>::fmt,bat::printer::OutputHandle::write_fmt,0.3363856691788796,12.991683289882637
-_<core::option::Option<T>as_core::fmt::Debug>::fmt,bat::printer::OutputHandle::write_fmt,0.3996490397685844,14.119217015230507
-_<core::option::Option<T>as_core::fmt::Debug>::fmt,bat::printer::OutputHandle::write_fmt,0.3996490397685844,14.119217015230507
-_<core::option::Option<T>as_core::fmt::Debug>::fmt,bat::printer::OutputHandle::write_fmt,0.3996490397685844,14.119217015230507
-std::panic::get_backtrace_style,bat::style::StyleComponent::components,0.652389247453656,13.580904682453603
-core::result::fmt<isize_std::io::error::Error>,bat::printer::OutputHandle::write_fmt,0.40080930614072585,14.119217015230507
-core::ptr::drop_in_place<once_cell::sync::OnceCell<syntect::parsing::syntax_set::LazyContexts>>,bat::input::InputDescription::title,0.4236846032617125,9.182269221897126
-unsafe_libyaml::scanner::yaml_parser_scan_block_scalar_breaks,bat::style::StyleComponentList::to_components::_{{closure}},0.16197299449992866,1.1461769278498997
-filter_def_priority_cmp,bat::input::InputDescription::title,0.36258902211037375,8.414236827629768
-git_libgit2_init,bat::diff::get_git_diff::_{{closure}}::_{{closure}},1.0,10.222873874554535
-git_tag__parse,bat::assets::assets_metadata::AssetsMetadata::is_compatible_with::_{{closure}},0.3748996654517551,8.127745610469557
-git_tlsdata_init,bat::vscreen::Attributes::update_with_sgr::_{{closure}},0.5382075088886161,9.058219174091015
-git__linenlen,bat::vscreen::Attributes::update_with_sgr::_{{closure}},0.19644106916656337,5.998309110517384
-git_zstream_done,bat::input::InputDescription::title,0.6552713514386841,12.46286011028893
-is_cr_needed,bat::input::InputDescription::title,0.26022309317419745,7.773301925078826
-git_attr_path__free,bat::output::OutputType::stdout,0.5678113304067791,9.32788263325166
-config_snapshot_unlock,bat::diff::get_git_diff::_{{closure}}::_{{closure}},0.6268738168196494,8.178302021063635
-config_snapshot_lock,bat::diff::get_git_diff::_{{closure}}::_{{closure}},0.6268738168196494,8.178302021063635
-config_snapshot_delete,bat::diff::get_git_diff::_{{closure}}::_{{closure}},0.6268738168196494,8.178302021063635
-config_snapshot_set_multivar,bat::diff::get_git_diff::_{{closure}}::_{{closure}},0.6268738168196494,8.178302021063635
-config_snapshot_set,bat::diff::get_git_diff::_{{closure}}::_{{closure}},0.6268738168196494,8.178302021063635
-config_snapshot_delete_multivar,bat::diff::get_git_diff::_{{closure}}::_{{closure}},0.6268738168196494,8.178302021063635
-onig_st_init_strend_table_with_size,bat::vscreen::Attributes::update_with_sgr::_{{closure}},1.0,10.270301608378436
-onig_st_init_callout_name_table_with_size,bat::vscreen::Attributes::update_with_sgr::_{{closure}},1.0,10.270301608378436
-onigenc_single_byte_code_to_mbclen,bat::vscreen::EscapeSequenceOffsetsIterator::next_csi::_{{closure}},0.2695918737461023,6.611979807974791
-onigenc_single_byte_code_to_mbclen,bat::vscreen::EscapeSequenceOffsetsIterator::next_csi::_{{closure}},0.2695918737461023,6.611979807974791
-onigenc_single_byte_code_to_mbclen,bat::vscreen::EscapeSequenceOffsetsIterator::next_nf::_{{closure}},0.2695918737461023,6.611979807974791
-onigenc_is_mbc_word_ascii,bat::input::InputDescription::title,0.2456376961896268,6.8471088789893795
-5172
+/Users/landen/Research/bsim/bins/bat/x64/bat-O2,bat-O0-x64.mv.db,0.0,0.9
+0 "bat::assets::clear_asset","std::io::error::repr_bitpacked::decode_repr<&std::io::error::Custom,_std::io::error::repr_bitpacked::{impl#2}::data::{closure_env#0}>","0.17163373145633004","5.5169526631246475"
+"bat::assets::clear_asset","git_str_putc","0.16378854688283892","3.958445629684806"
+"bat::assets::clear_asset","yaml_rust::scanner::Scanner<T>::skip","0.16068864139752395","2.7961464615663774"
+"bat::assets::clear_asset","std::panicking::default_hook::{closure#1}","0.1541809330559107","1.862539181720357"
+"bat::assets::clear_asset","std::env::current_exe","0.15208766587994865","3.3626863146806114"
+1 "bat::config::config_file","std::process::Command::spawn","0.28654968751397975","9.602541376817168"
+"bat::config::config_file","std::sys::pal::common::small_c_string::run_with_cstr_allocating<core::option::Option<std::ffi::os_str::OsString>>","0.2553947352223363","8.61246994928253"
+"bat::config::config_file","std::sys::pal::common::small_c_string::run_with_cstr_allocating<std::sys::pal::unix::fs::File>","0.25515602046675934","8.61246994928253"
+"bat::config::config_file","std::sys::pal::common::small_c_string::run_with_cstr_allocating<std::sys::pal::unix::fs::FileAttr>","0.2535883108479742","8.61246994928253"
+"bat::config::config_file","std::sys::pal::unix::process::process_common::os2c","0.24710572672352818","8.393025612162614"
+2 "bat::config::generate_config_file","std::sys_common::backtrace::print","0.23603885992090629","15.652972475706598"
+"bat::config::generate_config_file","std::io::stdio::Stdin::read_line","0.2167420668227925","15.426649899230405"
+"bat::config::generate_config_file","std::io::stdio::print_to_buffer_if_capture_used","0.1608977878285717","1.561873474276914"
+"bat::config::generate_config_file","std::backtrace_rs::symbolize::gimli::Mapping::load_dwarf_package","0.1552393837788707","1.0937283246386427"
+3 "bat::config::get_args_from_str","std::backtrace_rs::symbolize::gimli::libs_dl_iterate_phdr::callback","0.18549259887657882","3.2204605732925318"
+4 "bat::config::get_args_from_env_vars","xdl_add_change","0.3249057688509375","13.326757694044215"
+"bat::config::get_args_from_env_vars","node_new_bag_if_else","0.3091306592477788","11.72255721366826"
+"bat::config::get_args_from_env_vars","history_node_new","0.2537789950310392","9.663634400142096"
+"bat::config::get_args_from_env_vars","yaml_rust::parser::Parser<T>::next","0.2518564348135663","9.411587619278269"
+"bat::config::get_args_from_env_vars","node_new_option","0.2510899382829501","8.004303423519293"
+5 "bat::input::named","std::sys::pal::unix::fs::readdir","0.21943697228054496","10.992024714894594"
+"bat::input::named","std::sys_common::process::CommandEnv::set","0.20852527197376658","9.443828350202619"
+"bat::input::named","addr2line::addr2line::render_file<gimli::read::endian_slice::EndianSlice<gimli::endianity::LittleEndian>>","0.20619198258783847","7.078752851817267"
+"bat::input::named","_<core::ops::range::RangeInclusive<usize>as_core::slice::index::SliceIndex<[T]>>::index","0.20019695624234024","7.409094713358694"
+"bat::input::named","_<core::ops::range::RangeInclusive<usize>as_core::slice::index::SliceIndex<[T]>>::index","0.20019695624234024","7.409094713358694"
+6 "bat::run_controller","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.23389147735072827","7.8772924735743315"
+"bat::run_controller","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.23389147735072827","7.8772924735743315"
+"bat::run_controller","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.23389147735072827","7.8772924735743315"
+"bat::run_controller","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.23389147735072827","7.8772924735743315"
+"bat::run_controller","_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter","0.18641466365733428","6.805167727611338"
+7 "bat::main","bat::main","0.32564087332132313","16.274144831062458"
+"bat::main","std::io::stdio::Stderr::lock","0.25327036214544196","11.645190088174434"
+"bat::main","std::io::stdio::write_all","0.24045035041987417","11.229710215826293"
+"bat::main","std::io::stdio::write_all_vectored","0.24045035041987417","11.229710215826293"
+"bat::main","std::io::stdio::write","0.24036416796493607","11.340662729423016"
+8 "bat::syntax_mapping::builtin::build_matcher_dynamic","core::iter::adapters::flatten::FlattenCompat<I,U>::iter_try_fold","0.23702345028232424","13.601597182304097"
+"bat::syntax_mapping::builtin::build_matcher_dynamic","core::iter::adapters::flatten::FlattenCompat<I,U>::iter_try_fold","0.2214410093697054","11.74651485135372"
+"bat::syntax_mapping::builtin::build_matcher_dynamic","addr2line::addr2line::render_file<gimli::read::endian_slice::EndianSlice<gimli::endianity::LittleEndian>>","0.20624784420395956","7.511043456920207"
+"bat::syntax_mapping::builtin::build_matcher_dynamic","core::ptr::drop_in_place<(std::ffi::os_str::OsString,_std::ffi::os_str::OsString)>","0.20009624284327363","1.669626618209933"
+"bat::syntax_mapping::builtin::build_matcher_dynamic","core::ptr::drop_in_place<std::backtrace_rs::symbolize::gimli::Library>","0.20009624284327363","1.669626618209933"
+9 "bat::assets::build_assets::acknowledgements::license_contains_marker","regex_automata::nfa::thompson::compiler::Utf8Compiler::pop_freeze","0.243715470501832","10.03181419170149"
+"bat::assets::build_assets::acknowledgements::license_contains_marker","bat::assets::build_assets::acknowledgements::normalize_license_text","0.22916681094474547","10.060193839208868"
+"bat::assets::build_assets::acknowledgements::license_contains_marker","FUN_00708671","0.20147208907330694","4.995628287860512"
+"bat::assets::build_assets::acknowledgements::license_contains_marker","FUN_0073f26c","0.20147208907330694","4.995628287860512"
+"bat::assets::build_assets::acknowledgements::license_contains_marker","FUN_0073f43c","0.20147208907330694","4.995628287860512"
+10 "bat::assets::build_assets::acknowledgements::build_acknowledgements::_{{closure}}","_<&T_as_core::fmt::Debug>::fmt","1.0","9.18110270091743"
+"bat::assets::build_assets::acknowledgements::build_acknowledgements::_{{closure}}","_<&T_as_core::fmt::Debug>::fmt","1.0","9.18110270091743"
+"bat::assets::build_assets::acknowledgements::build_acknowledgements::_{{closure}}","_<&mut_bincode::de::Deserializer<R,O>as_serde::de::VariantAccess>::newtype_variant_seed","1.0","9.18110270091743"
+"bat::assets::build_assets::acknowledgements::build_acknowledgements::_{{closure}}","_<&mut_bincode::de::Deserializer<R,O>as_serde::de::VariantAccess>::newtype_variant_seed","1.0","9.18110270091743"
+"bat::assets::build_assets::acknowledgements::build_acknowledgements::_{{closure}}","_<&mut_bincode::ser::Serializer<W,O>as_serde::ser::Serializer>::serialize_u64","1.0","9.18110270091743"
+11 "bat::assets::lazy_theme_set::LazyThemeSet::get","_<bat::assets::lazy_theme_set::_::<impl_serde::de::Deserialize_for_bat::assets::lazy_theme_set::LazyTheme>::deserialize::__Visitor_as_serde::de::Visitor>::visit_seq","0.14164727336553604","2.880857911373668"
+"bat::assets::lazy_theme_set::LazyThemeSet::get","_<bat::assets::lazy_theme_set::_::<impl_serde::de::Deserialize_for_bat::assets::lazy_theme_set::LazyTheme>::deserialize::__Visitor_as_serde::de::Visitor>::visit_seq","0.14164727336553604","2.880857911373668"
+"bat::assets::lazy_theme_set::LazyThemeSet::get","serde::de::MapAccess::next_entry_seed","0.13632679359787453","2.302064472445176"
+"bat::assets::lazy_theme_set::LazyThemeSet::get","serde::de::MapAccess::next_entry_seed","0.13632679359787453","2.302064472445176"
+"bat::assets::lazy_theme_set::LazyThemeSet::get","_<serde::de::impls::<impl_serde::de::Deserialize_for_alloc::vec::Vec<T>>::deserialize::VecVisitor<T>as_serde::de::Visitor>::visit_seq","0.1285407753421687","1.508303749423133"
+12 "bat::assets::HighlightingAssets::get_syntax_set","addr2line::addr2line::render_file<gimli::read::endian_slice::EndianSlice<gimli::endianity::LittleEndian>>","0.20492568043946072","5.710302521358382"
+13 "bat::assets::HighlightingAssets::get_theme","merge_file__xdiff","0.22994711310368163","13.723233630774185"
+"bat::assets::HighlightingAssets::get_theme","std::sys_common::backtrace::_print_fmt::{closure#1}::{closure#0}","0.191685567531039","5.263729847690367"
+"bat::assets::HighlightingAssets::get_theme","free_regex_ext","0.18353627593890195","5.400338656332332"
+"bat::assets::HighlightingAssets::get_theme","alloc::string::String::from_utf8","0.18213926337660863","4.928534953982324"
+"bat::assets::HighlightingAssets::get_theme","alloc::string::String::from_utf8","0.18213926337660863","4.928534953982324"
+14 "bat::assets::HighlightingAssets::get_syntax_for_file_name","_<&mut_serde_yaml::de::DeserializerFromEvents_as_serde::de::Deserializer>::deserialize_str","0.1808987418505993","6.5107607200328435"
+"bat::assets::HighlightingAssets::get_syntax_for_file_name","_<&mut_serde_yaml::de::DeserializerFromEvents_as_serde::de::Deserializer>::deserialize_str","0.1808987418505993","6.5107607200328435"
+"bat::assets::HighlightingAssets::get_syntax_for_file_name","_<&mut_serde_yaml::de::DeserializerFromEvents_as_serde::de::Deserializer>::deserialize_str","0.1808987418505993","6.5107607200328435"
+"bat::assets::HighlightingAssets::get_syntax_for_file_name","syntect::parsing::parser::ParseState::push_meta_ops::_{{closure}}","0.15326639767108394","1.619691575047514"
+"bat::assets::HighlightingAssets::get_syntax_for_file_name","clap_builder::parser::parser::Parser::resolve_pending","0.15155797991359363","1.589272309567182"
+15 "bat::assets::HighlightingAssets::get_syntax_for_file_extension","std::backtrace_rs::symbolize::gimli::Mapping::load_dwarf_package","0.192202847276599","8.878825785200878"
+"bat::assets::HighlightingAssets::get_syntax_for_file_extension","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.17347511260880047","2.2403626065028837"
+"bat::assets::HighlightingAssets::get_syntax_for_file_extension","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.17347511260880047","2.2403626065028837"
+"bat::assets::HighlightingAssets::get_syntax_for_file_extension","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.17347511260880047","2.2403626065028837"
+"bat::assets::HighlightingAssets::get_syntax_for_file_extension","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.17347511260880047","2.2403626065028837"
+16 "bat::assets::get_acknowledgements","syntect::parsing::parser::ParseState::push_meta_ops::_{{closure}}","0.16697540907423364","2.9311257636376906"
+"bat::assets::get_acknowledgements","regex_automata::nfa::thompson::compiler::Utf8Compiler::pop_freeze","0.16458527862595604","3.6243288696239064"
+"bat::assets::get_acknowledgements","std::env::current_dir","0.1590866242258183","4.319992116763817"
+"bat::assets::get_acknowledgements","bat::assets::build_assets::acknowledgements::normalize_license_text","0.15895617009590773","3.996468354533219"
+"bat::assets::get_acknowledgements","std::panicking::__rust_drop_panic","0.15549711982437145","3.657972019021213"
+17 "bat::pager::get_pager","std::path::PathBuf::_set_extension","0.16684039746469206","5.586736075089532"
+18 "bat::input::InputReader::new","core::panicking::panic_nounwind_fmt","0.24414707802958419","6.6486962560777725"
+"bat::input::InputReader::new","_<std::path::Component_as_core::convert::AsRef<std::ffi::os_str::OsStr>>::as_ref","0.23266179455016392","5.809968695473587"
+"bat::input::InputReader::new","core::ops::function::FnOnce::call_once","0.23266179455016392","5.809968695473587"
+"bat::input::InputReader::new","core::iter::adapters::try_process","0.23098679871109964","8.80798225900367"
+"bat::input::InputReader::new","core::iter::adapters::try_process","0.21960732929127658","8.017331467384608"
+19 "bat::input::InputReader::new","_<std::path::Component_as_core::convert::AsRef<std::ffi::os_str::OsStr>>::as_ref","0.2508329649251983","6.531117055369369"
+"bat::input::InputReader::new","core::ops::function::FnOnce::call_once","0.2508329649251983","6.531117055369369"
+"bat::input::InputReader::new","core::panicking::panic_nounwind_fmt","0.24103317735591215","6.32293544063422"
+"bat::input::InputReader::new","core::iter::adapters::try_process","0.24086117044628425","9.878093174533358"
+"bat::input::InputReader::new","core::iter::adapters::try_process","0.22912772719885535","8.735598116565619"
+20 "bat::error::default_error_handler","regex_syntax::ast::HexLiteralKind::digits","0.257202475356113","8.364653631855628"
+"bat::error::default_error_handler","quick_xml::reader::BangType::to_err","0.2455701595242172","9.4756032449056"
+"bat::error::default_error_handler","quick_xml::reader::BangType::to_err","0.2455701595242172","9.4756032449056"
+"bat::error::default_error_handler","bat::error::default_error_handler","0.22984442783067155","8.930297255846801"
+"bat::error::default_error_handler","core::option::Option<core::result::Result<T,E>>::transpose","0.22923941356184","9.210423419385595"
+21 "bat::vscreen::Attributes::update","_<bat::vscreen::EscapeSequenceIterator_as_core::iter::traits::iterator::Iterator>::next::_{{closure}}","0.9999999999999999","18.88684737161034"
+"bat::vscreen::Attributes::update","_<clap_builder::builder::value_parser::ValueParser_as_core::clone::Clone>::clone","0.9999999999999999","18.88684737161034"
+"bat::vscreen::Attributes::update","_<regex_syntax::ast::Ast_as_core::ops::drop::Drop>::drop","0.9999999999999999","18.88684737161034"
+"bat::vscreen::Attributes::update","_<regex_syntax::ast::parse::NestLimiter<P>as_regex_syntax::ast::visitor::Visitor>::visit_pre","0.9999999999999999","18.88684737161034"
+"bat::vscreen::Attributes::update","_<regex_syntax::hir::translate::TranslatorI_as_regex_syntax::ast::visitor::Visitor>::visit_post","0.9999999999999999","18.88684737161034"
+22 "bat::printer::InteractivePrinter::preprocess","addr2line::addr2line::render_file<gimli::read::endian_slice::EndianSlice<gimli::endianity::LittleEndian>>","0.2550560893350603","14.663119874529844"
+"bat::printer::InteractivePrinter::preprocess","yaml_rust::parser::Parser<T>::next","0.2422037645008139","9.837035223009742"
+"bat::printer::InteractivePrinter::preprocess","std::io::impls::_<impl_std::io::Read_for&[u8]>::read_exact","0.2415382873409187","12.00820182672746"
+"bat::printer::InteractivePrinter::preprocess","std::io::impls::_<impl_std::io::Read_for&[u8]>::read_exact","0.2415382873409187","12.00820182672746"
+"bat::printer::InteractivePrinter::preprocess","_<serde::de::OneOf_as_core::fmt::Display>::fmt","0.22015493246325005","9.188899774146643"
+23 "bat::terminal::as_terminal_escaped","core::slice::_<impl[T]>::split_first","0.24012433226639404","8.247645383302526"
+"bat::terminal::as_terminal_escaped","core::option::Option<&T>::cloned","0.23619695639650445","7.5971083503835155"
+"bat::terminal::as_terminal_escaped","core::option::Option<&T>::cloned","0.23619695639650445","7.5971083503835155"
+"bat::terminal::as_terminal_escaped","core::option::Option<T>::map","0.23619695639650445","7.5971083503835155"
+"bat::terminal::as_terminal_escaped","core::option::Option<T>::map","0.23619695639650445","7.5971083503835155"
+24 "bat::terminal::to_ansi_color","code_to_mbclen","0.19466186221548593","5.373211310820243"
+"bat::terminal::to_ansi_color","git_futils_canonical_mode","0.16589895777624708","2.7118089593454107"
+"bat::terminal::to_ansi_color","core::unicode::unicode_data::white_space::lookup","0.14813788368671008","1.988891267591952"
+"bat::terminal::to_ansi_color","core::unicode::unicode_data::white_space::lookup","0.14813788368671008","1.988891267591952"
+"bat::terminal::to_ansi_color","core::unicode::unicode_data::white_space::lookup","0.14813788368671008","1.988891267591952"
+25 "bat::vscreen::AnsiStyle::update","std::panicking::begin_panic_handler::get","0.36505653154070256","9.739982865788374"
+"bat::vscreen::AnsiStyle::update","_<core::iter::sources::once::Once<T>as_core::iter::traits::iterator::Iterator>::size_hint","0.324148710656812","8.224854932950084"
+"bat::vscreen::AnsiStyle::update","core::ptr::drop_in_place<core::result::Result<&[u8],std::io::error::Error>>","0.3033520105375614","6.02836125390346"
+"bat::vscreen::AnsiStyle::update","core::ptr::drop_in_place<core::result::Result<alloc::boxed::Box<regex_automata::meta::regex::Cache>,usize>>","0.3033520105375614","6.02836125390346"
+"bat::vscreen::AnsiStyle::update","core::ptr::drop_in_place<core::result::Result<core::result::Result<serde_yaml::de::invalid_type::Void,serde_yaml::error::Error>,serde_yaml::de::invalid_type::InvalidType>>","0.3033520105375614","6.02836125390346"
+26 "bat::vscreen::Attributes::update_with_charset","pack_index_free","0.4177649966687544","12.946258461603172"
+"bat::vscreen::Attributes::update_with_charset","core::ptr::drop_in_place<(std::ffi::os_str::OsString,_std::ffi::os_str::OsString)>","0.36468668564740786","10.184222716452044"
+"bat::vscreen::Attributes::update_with_charset","core::ptr::drop_in_place<std::backtrace_rs::symbolize::gimli::Library>","0.36468668564740786","10.184222716452044"
+"bat::vscreen::Attributes::update_with_charset","core::ptr::drop_in_place<gimli::read::line::LineRows<gimli::read::endian_slice::EndianSlice<gimli::endianity::LittleEndian>,_gimli::read::line::IncompleteLineProgram<gimli::read::endian_slice::EndianSlice<gimli::endianity::LittleEndian>,_usize>,_usize>>","0.3588050767397078","10.391719796001379"
+"bat::vscreen::Attributes::update_with_charset","name_find","0.35057990148052226","10.496828466714195"
+27 "bat::vscreen::Attributes::parse_color","core::num::from_str","0.24814391011685172","20.64446417251488"
+"bat::vscreen::Attributes::parse_color","core::num::from_str","0.1899512590281621","9.73279768343045"
+"bat::vscreen::Attributes::parse_color","core::num::from_str","0.1618446204698959","4.758786111164653"
+"bat::vscreen::Attributes::parse_color","hashbrown::raw::RawTableInner::fallible_with_capacity","0.15841277425504946","4.0714164534695465"
+"bat::vscreen::Attributes::parse_color","hashbrown::raw::RawTableInner::fallible_with_capacity","0.15841277425504946","4.0714164534695465"
+28 "bat::vscreen::join","core::num::from_str","0.1665017540738631","4.332970271478419"
+29 "bat::printer::InteractivePrinter::print_horizontal_line","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.2243139692161108","6.292197256319343"
+"bat::printer::InteractivePrinter::print_horizontal_line","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.2243139692161108","6.292197256319343"
+"bat::printer::InteractivePrinter::print_horizontal_line","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.2243139692161108","6.292197256319343"
+"bat::printer::InteractivePrinter::print_horizontal_line","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.2243139692161108","6.292197256319343"
+"bat::printer::InteractivePrinter::print_horizontal_line","clap_builder::error::Error<F>::too_few_values","0.21337559238971815","7.097762039967743"
+30 "bat::printer::InteractivePrinter::print_horizontal_line_term","std::sys_common::backtrace::_print::fmt","0.26276542777740863","13.037976246474486"
+"bat::printer::InteractivePrinter::print_horizontal_line_term","core::option::Option<T>::map_or","0.23186430408330347","9.485617577679657"
+"bat::printer::InteractivePrinter::print_horizontal_line_term","core::ptr::drop_in_place<std::backtrace_rs::symbolize::gimli::Mapping>","0.22910567064230933","6.9578990501425695"
+"bat::printer::InteractivePrinter::print_horizontal_line_term","_<hashbrown::raw::RawTable<T,A>as_core::iter::traits::collect::IntoIterator>::into_iter","0.22802877148496836","7.9480432721698335"
+"bat::printer::InteractivePrinter::print_horizontal_line_term","_<hashbrown::raw::RawTable<T,A>as_core::iter::traits::collect::IntoIterator>::into_iter","0.22802877148496836","7.9480432721698335"
+31 "bat::printer::InteractivePrinter::print_header_component_with_indent","core::option::Option<T>::as_ref","0.2515132561431543","6.98750909921896"
+"bat::printer::InteractivePrinter::print_header_component_with_indent","core::option::Option<T>::as_ref","0.2515132561431543","6.98750909921896"
+"bat::printer::InteractivePrinter::print_header_component_with_indent","_<core::option::Option<T>as_core::fmt::Debug>::fmt","0.24896529743587972","6.306228650643219"
+"bat::printer::InteractivePrinter::print_header_component_with_indent","_<core::option::Option<T>as_core::fmt::Debug>::fmt","0.24896529743587972","6.306228650643219"
+"bat::printer::InteractivePrinter::print_header_component_with_indent","core::option::Option<T>::is_some","0.2466812348913631","4.972401453791611"
+32 "bat::decorations::LineChangesDecoration::generate_cached","core::str::count::char_count_general_case","0.3198354782104911","37.99670116524508"
+"bat::decorations::LineChangesDecoration::generate_cached","core::fmt::Formatter::pad_integral","0.2401934960621268","22.570505552291593"
+"bat::decorations::LineChangesDecoration::generate_cached","core::str::count::do_count_chars","0.2069520918675821","14.109466051812763"
+"bat::decorations::LineChangesDecoration::generate_cached","core::fmt::Formatter::pad","0.16375504497847745","4.088053768729869"
+"bat::decorations::LineChangesDecoration::generate_cached","core::tuple::_<impl_core::cmp::Ord_for(U,T)>::cmp","0.1547993041385335","2.6216860146821395"
+33 "bat::diff::get_git_diff::_{{closure}}","filter_list_new","0.21136465463456164","10.864991003707374"
+"bat::diff::get_git_diff::_{{closure}}","compile_range_repeat_node","0.2095792985340496","10.038256671210362"
+"bat::diff::get_git_diff::_{{closure}}","text_eol_is_crlf","0.2039097698202255","5.673448117411676"
+"bat::diff::get_git_diff::_{{closure}}","quantifier_type_num","0.18965639686876432","2.523088635515953"
+"bat::diff::get_git_diff::_{{closure}}","is_anychar_infinite_greedy","0.1828279959460486","5.1265632797207425"
+34 "bat::diff::get_git_diff::_{{closure}}","FUN_00178932","0.9999999999999998","8.589937289120217"
+"bat::diff::get_git_diff::_{{closure}}","FUN_0039e632","0.9999999999999998","8.589937289120217"
+"bat::diff::get_git_diff::_{{closure}}","_<T_as_core::array::equality::SpecArrayEq<U,_>>::spec_eq","0.9999999999999998","8.589937289120217"
+"bat::diff::get_git_diff::_{{closure}}","_<aho_corasick::packed::api::MatchKind_as_core::default::Default>::default","0.9999999999999998","8.589937289120217"
+"bat::diff::get_git_diff::_{{closure}}","_<aho_corasick::util::search::MatchKind_as_core::default::Default>::default","0.9999999999999998","8.589937289120217"
+35 "bat::output::OutputType::try_pager","alloc::collections::btree::map::BTreeMap::insert<std::ffi::os_str::OsString,_core::option::Option<std::ffi::os_str::OsString>,_alloc::alloc::Global>","0.3059223050307487","149.5342434135758"
+"bat::output::OutputType::try_pager","alloc::collections::btree::map::BTreeMap::insert<std::ffi::os_str::OsString,_std::ffi::os_str::OsString,_alloc::alloc::Global>","0.3059223050307487","149.5342434135758"
+"bat::output::OutputType::try_pager","gimli::read::abbrev::Abbreviations::insert","0.28767163824260533","129.94897744599234"
+36 "bat::input::Input::_ordinary_file","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.29546229112655226","10.866716875634234"
+"bat::input::Input::_ordinary_file","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.29546229112655226","10.866716875634234"
+"bat::input::Input::_ordinary_file","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.29546229112655226","10.866716875634234"
+"bat::input::Input::_ordinary_file","aho_corasick::packed::teddy::generic::SlimMaskBuilder::from_teddy::_{{closure}}","0.29546229112655226","10.866716875634234"
+"bat::input::Input::_ordinary_file","_<alloc::vec::Vec<T>as_alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter","0.2839872564949452","15.227329857504252"
+37 "bat::input::InputKind::description","core::ptr::drop_in_place<quick_xml::escapei::EscapeError>","0.2746206223377817","10.558542665843728"
+"bat::input::InputKind::description","core::ptr::drop_in_place<plist::stream::ReaderInner<&mut_std::io::buffered::bufreader::BufReader<std::fs::File>>>","0.2697787178931179","10.881287357633406"
+"bat::input::InputKind::description","core::ptr::drop_in_place<regex_syntax::ast::GroupKind>","0.2697787178931179","10.881287357633406"
+"bat::input::InputKind::description","core::ptr::drop_in_place<bugreport::report::ReportEntry>","0.26166184378135193","11.75139599429565"
+"bat::input::InputKind::description","core::ptr::drop_in_place<bat::input::InputKind>","0.26095925212327137","10.4350660837072"
