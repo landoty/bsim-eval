@@ -1,0 +1,27 @@
+[package]
+name = "egg"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+egg = "0.9.5"
+
+[profile.dev]
+strip = "none"
+lto = "off"
+
+[profile.zero]
+inherits = "dev" 
+opt-level = 0
+
+[profile.one]
+inherits = "dev" 
+opt-level = 1
+
+[profile.two]
+inherits = "dev" 
+opt-level = 2
+
+[profile.three]
+inherits = "dev" 
+opt-level = 3
