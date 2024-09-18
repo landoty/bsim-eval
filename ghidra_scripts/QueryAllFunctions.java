@@ -116,7 +116,7 @@ public class QueryAllFunctions extends GhidraScript {
         File out_file = null;
         try {
             StringBuffer buf = new StringBuffer();
-            buf.append("uuid, query function,result function,similarity,confidence\n");
+            buf.append("uuid,queryfn,resultfn,similarity,confidence\n");
             out_file = new File(OUTPUT_FILE);
             FileWriter fw = new FileWriter(out_file, false); // don't append
             fw.write(buf.toString());
