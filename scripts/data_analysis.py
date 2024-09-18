@@ -15,7 +15,8 @@ def plot(to_plot: dict, to_table: dict) -> None:
         color=colors[0:len(to_plot["data"]["sims"])],
         label=to_plot["runs"],
         bins=10,
-        range=(0.0,1.0)
+        range=(0.0,1.0),
+        stacked=True
     )
     axs[0].set_xlabel("similarity")
     axs[0].set_ylabel("# of matches")
