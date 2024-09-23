@@ -5,41 +5,68 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def plot(to_plot: dict, to_table: dict) -> None:
-    colors = ["dodgerblue", "forestgreen", "mediumorchid", "black"]
-    fig, axs = plt.subplots(1,2,tight_layout=False)
+colors = ["dodgerblue", "forestgreen", "mediumorchid", "black"]
 
-    axs[0].hist(
-        to_plot["data"]["sims"],
-        alpha=0.7,
-        color=colors[0:len(to_plot["data"]["sims"])],
-        label=to_plot["runs"],
-        bins=10,
-        range=(0.0,1.0),
-        stacked=True
-    )
-    axs[0].set_xlabel("similarity")
-    axs[0].set_ylabel("# of matches")
-    axs[0].set_title("Correct Match Similarity Distr.")
+def prepare_data(files: list) -> pd.core.frame.DataFrame:
+    """ setup data into a pandas df """
+    data = []
+    for f in files:
+        if os.path.exists(f):
+            df = pd.read_csv(f)
+            df["sim_range"] = pd.cut(
+                                df["similarity"],
+                                np.arange(0.0, 1.2, 0.2),
+                                labels=np.arange(5)
+                            )
+            run = os.path.basename(f).split(".")[0]
+            df["run"] = run
+            data.append(df)
 
-    for i in range(len(to_plot["data"]["sims"])):
-        axs[1].scatter(
-            to_plot["data"]["sims"][i],
-            to_plot["data"]["confs"][i],
-            color=colors[i],
-            alpha=0.7)
-        axs[1].set_xlabel("similarity")
-        axs[1].set_ylabel("confidence")
-        axs[1].set_title("Correct Match Similarity v. Confidence")
+    return pd.concat(data)
 
-    fig.legend()
-    plt.savefig("positive-match-correlation.png")
+def match_accuracy_table(df: pd.core.frame.DataFrame) -> bool:
+    """ build the match accuracy table """
+    table_stats = {
+        "runs": [],
+        "row_labels": [
+            "[0.0 - 0.2)",
+            "[0.2 - 0.4)",
+            "[0.4 - 0.6)",
+            "[0.6 - 0.8)",
+            "[0.8 - 1.0)",
+            "# of Matches",
+            "# of Functions",
+            "Overall Accuracy"
+        ],
+        "data": {
+            "0": [],
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "num_matches": [],
+            "num_fns": [],
+            "acc": []
+        }
+    }
+    runs = df.groupby("run")
+    for run, data in runs:
+        table_stats["runs"].append(run)
+        num_fns = data["uuid"].nunique()
+        table_stats["data"]["num_fns"].append(num_fns)
 
-    plt.clf()
+        matched_sim_count = data.loc[data["queryfn"]==data["resultfn"]]["sim_range"].value_counts()
+        for i in np.arange(5):
+            table_stats["data"][str(i)].append(matched_sim_count[i])
+
+        num_matches = matched_sim_count.sum()
+        table_stats["data"]["num_matches"].append(num_matches)
+        table_stats["data"]["acc"].append(round(num_matches/num_fns, 3))
+
     plt.table(
-        cellText=list(to_table["data"].values()),
-        rowLabels=to_table["row_labels"],
-        colLabels=to_table["runs"],
+        cellText=list(table_stats["data"].values()),
+        rowLabels=table_stats["row_labels"],
+        colLabels=table_stats["runs"],
         colColours=list(zip(colors, [0.5 for i in range(len(colors))])),
         alpha=0.5,
         loc='center'
@@ -48,29 +75,14 @@ def plot(to_plot: dict, to_table: dict) -> None:
     ax.get_xaxis().set_visible(False)
     ax.get_yaxis().set_visible(False)
     plt.box(on=None)
-    ax.set_title("Match Accuracy")
+    ax.set_title("Correct Matches v. Similarity Scores")
+    plt.gcf().subplots_adjust(left=0.3)
     plt.savefig("match-accuracy.png")
 
-def analyze(files: list) -> None:
-    table_stats = {
-        "runs": [],
-        "row_labels": [
-            "No. of Functions",
-            "Top1 Acc.",
-            "Top3 Acc.",
-            "Top5 Acc.",
-            "Top10 Acc.",
-            "Top25 Acc."
-        ],
-        "data": {
-            "num_fns": [],
-            "top1": [],
-            "top3": [],
-            "top5": [],
-            "top10": [],
-            "top25": [],
-        }
-    }
+    return True
+
+def sim_conf_correlation(df: pd.core.frame.DataFrame) -> bool:
+    """ build the correlation plots """
     plot_stats = {
         "runs": [],
         "data": {
@@ -78,54 +90,57 @@ def analyze(files: list) -> None:
             "confs": []
         }
     }
-    for f in files:
-        if os.path.exists(f):
-            data = {
-                "top1": 0,
-                "top3": 0,
-                "top5": 0,
-                "top10": 0,
-                "top25": 0
-            }
-            run = os.path.basename(f).split(".")[0]
+    runs = df.groupby("run")
+    for run, data in runs:
+        plot_stats["runs"].append(run)
+        matched_fns = data.loc[data["queryfn"]==data["resultfn"]]
+        plot_stats["data"]["sims"].append(matched_fns["similarity"].to_list())
+        plot_stats["data"]["confs"].append(matched_fns["confidence"].to_list())
 
-            df = pd.read_csv(f)
-            total_fns = df['uuid'].nunique()
-            matched_fns = df.loc[df["queryfn"] == df["resultfn"]]
-            all_matches = df.groupby("uuid")
+    fig, axs = plt.subplots(1,2,tight_layout=False)
+    axs[0].hist(
+        plot_stats["data"]["sims"],
+        alpha=0.7,
+        color=colors[0:len(plot_stats["data"]["sims"])],
+        label=plot_stats["runs"],
+        bins=10,
+        range=(0.0,1.0),
+        stacked=True
+    )
+    axs[0].set_xlabel("similarity")
+    axs[0].set_ylabel("# of matches")
+    axs[0].set_title("Correct Match Similarity Distr.")
 
-            # get plot stats
-            plot_stats["runs"].append(run)
-            plot_stats["data"]["sims"].append(matched_fns["similarity"].to_list())
-            plot_stats["data"]["confs"].append(matched_fns["confidence"].to_list())
+    for i in range(len(plot_stats["data"]["sims"])):
+        axs[1].scatter(
+            plot_stats["data"]["sims"][i],
+            plot_stats["data"]["confs"][i],
+            color=colors[i],
+            alpha=0.7)
+        axs[1].set_xlabel("similarity")
+        axs[1].set_ylabel("confidence")
+        axs[1].set_title("Correct Match Similarity v. Confidence")
 
-            # get table stats
-            for uuid, matches in all_matches:
-                iloc1 = df.index.get_loc(matches.iloc[0].name)
-                correct = matches[matches["queryfn"] == matches["resultfn"]]
-                if correct.shape[0] != 0:
-                    iloc_match = df.index.get_loc(correct.iloc[0].name)
-                    match_rank = iloc_match - iloc1 + 1
+    fig.legend()
+    plt.savefig("positive-match-correlation.png")
+    plt.clf()
 
-                    if match_rank == 1:
-                        data["top1"] += 1
-                    if match_rank <= 3:
-                        data["top3"] += 1
-                    if match_rank <= 5:
-                        data["top5"] += 1
-                    if match_rank <= 10:
-                        data["top10"] += 1
-                    if match_rank <= 25:
-                        data["top25"] += 1
+    return True
 
-            table_stats["runs"].append(run)
-            table_stats["data"]["num_fns"].append(total_fns)
-            for x in data.keys():
-                table_stats["data"][x].append(round(data[x] / total_fns, 3))
-        else:
-            print(f"Couldn't find {f}")
+def analyze(files: list) -> None:
+    data = prepare_data(files)
 
-    plot(plot_stats, table_stats)
+    created_table = match_accuracy_table(data)
+    if created_table:
+        print("Created match accuracy table")
+    else:
+        print("Failed to create match accuracy table")
+
+    created_plot = sim_conf_correlation(data)
+    if created_plot:
+        print("Created sim v. conf correlation plot")
+    else:
+        print("Failed to create sim v. conf correlation plot")
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
