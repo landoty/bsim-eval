@@ -26,9 +26,9 @@ import ghidra.program.model.symbol.*;
 
 public class QueryAllFunctions extends GhidraScript {
 
-	private static final int MATCHES_PER_FUNC = 25;
+	private static final int MATCHES_PER_FUNC = 1000;
 	private static final double SIMILARITY_BOUND = 0.0;
-	private static final double CONFIDENCE_BOUND = 0.9;
+	private static final double CONFIDENCE_BOUND = 0.0;
 
 	private FunctionDatabase DATABASE = null;
 	private static final String OUTPUT_FILE = "./function_similarities.txt";
@@ -42,17 +42,17 @@ public class QueryAllFunctions extends GhidraScript {
  	* 	getScriptArgs()	
  	*/
 
-        // process arguments
+        	// process arguments
 		if (currentProgram == null) {
 			println("No current program");
 			return;
 		}
 			
 		String args[] = getScriptArgs();
-        if(args.length < 1) {
+        	if(args.length < 1) {
         		println("Provide a database url!");
-            	return;
-        }
+            		return;
+        	}
         
 		boolean filter_namespace = false;
 		String filter_string = "";
@@ -63,44 +63,50 @@ public class QueryAllFunctions extends GhidraScript {
 				filter_string = args[2];		
 				println("Query by namespace " + filter_string);
 			}
-        }
+        	}
 
-        // Open the BSim database provided by args
-    	String database_url = args[0];
+        	// Open the BSim database provided by args
+    		String database_url = args[0];
 		URL url = BSimClientFactory.deriveBSimURL(database_url);
 		try {			
 			DATABASE = BSimClientFactory.buildClient(url, false);
-            if(! DATABASE.initialize()) {
-			    println(DATABASE.getLastError().message);
-          		return;
-		    } 
+			if(! DATABASE.initialize()) {
+				println(DATABASE.getLastError().message);
+          			return;
+			} 
 		} catch(Exception e) {
 			println("Failed to open database");
-     		return;
+     			return;
 		} 
 
-        // Initialize output file
-        File out_file = init_results_file();
-		FileWriter fw = new FileWriter(out_file, true); // get path back from init, true = append
+        	// Initialize output file
+        	File out_file = init_results_file();
+		// get path back from init, true = append
+		FileWriter fw = new FileWriter(out_file, true); 
 
-        // Create metadata file
+        	// Create metadata file
 		String[] split = database_url.split("/", 0);
 		String db_path_base = split[split.length-1]; 	
 		create_meta_file(db_path_base);
 
-        // Iterate over functions
-    	// Query
-        // Write results
-        SymbolTable sym_table = currentProgram.getSymbolTable();
-		for(FunctionIterator i = currentProgram.getFunctionManager().getFunctions(true); i.hasNext(); ) {
+        	// Iterate over functions
+    		// Query
+        	// Write results
+        	SymbolTable sym_table = currentProgram.getSymbolTable();
+		for(
+			FunctionIterator i = currentProgram.getFunctionManager().getFunctions(true); 
+			i.hasNext(); 
+		) {
 			Function f = i.next();
 			// function exists
 			if(f != null) {
 				if(filter_namespace){
-					String ns = sym_table.getNamespace(f.getEntryPoint()).getName(true); // get fullly qualified name
-					if(!ns.startsWith(filter_string)) { continue; } // inclusive filter
+					// get fullly qualified name
+					String ns = sym_table.getNamespace(f.getEntryPoint()).getName(true); 
+					// inclusive filter
+					if(!ns.startsWith(filter_string)) { continue; } 
 				}
-            	String result = run_query(f);
+            			String result = run_query(f);
 				if(!result.isEmpty()) {
 					fw.write(result);
 				}
@@ -109,24 +115,24 @@ public class QueryAllFunctions extends GhidraScript {
 		fw.close();	
 	}
 
-    private File init_results_file() throws Exception {
-    /*
-     * Initialize the output file
-     */ 
-        File out_file = null;
-        try {
-            StringBuffer buf = new StringBuffer();
-            buf.append("uuid,queryfn,resultfn,similarity,confidence\n");
-            out_file = new File(OUTPUT_FILE);
-            FileWriter fw = new FileWriter(out_file, false); // don't append
-            fw.write(buf.toString());
-            fw.close();
-        }
-        catch(IOException e) {
-            println("Failed to init results file");
-        }
-        return out_file;
-    }
+	private File init_results_file() throws Exception {
+    	/*
+     	* Initialize the output file
+     	*/ 
+        	File out_file = null;
+        	try {
+			StringBuffer buf = new StringBuffer();
+			buf.append("uuid,queryfn,resultfn,similarity,confidence\n");
+			out_file = new File(OUTPUT_FILE);
+			FileWriter fw = new FileWriter(out_file, false); // don't append
+			fw.write(buf.toString());
+			fw.close();
+        	}
+		catch(IOException e) {
+			println("Failed to init results file");
+		}
+		return out_file;
+	}
 
 
 	private void create_meta_file(String database) throws Exception {
@@ -142,14 +148,14 @@ public class QueryAllFunctions extends GhidraScript {
 			buf.append(String.valueOf(SIMILARITY_BOUND) + ",");
 			buf.append(String.valueOf(CONFIDENCE_BOUND) + "\n");
 			out_file = new File(META_FILE);
-			FileWriter fw = new FileWriter(out_file, false); // don't append, starting new file
+			// don't append, starting new file
+			FileWriter fw = new FileWriter(out_file, false); 
 			fw.write(buf.toString());
 			fw.close();
 		}
 		catch(IOException e) { 
 			println("Failed to create metadata file");
-        }
-		
+        	}	
 		return;
 	}
 
@@ -186,20 +192,27 @@ public class QueryAllFunctions extends GhidraScript {
 				SimilarityResult result = iter.next();
 				FunctionDescription base = result.getBase();
 				String source_fn = base.getFunctionName();
-                String uuid = UUID.randomUUID().toString();
+                		String uuid = UUID.randomUUID().toString();
 		
 				Iterator<SimilarityNote> subiter = result.iterator();
 				while (subiter.hasNext()) {
 					SimilarityNote note = subiter.next();
 					FunctionDescription fdesc = note.getFunctionDescription();
                   
-                    String matched_fn = fdesc.getFunctionName();
+                    			String matched_fn = fdesc.getFunctionName();
 
-                    buf.append('"' + uuid + '"' + ","); // uuid for the query batch
-					buf.append('"' + source_fn + '"' +  ","); // source fn in binary
-					buf.append('"' + matched_fn + '"' + ","); // matched fn in database
-					buf.append('"' + String.valueOf(note.getSimilarity()) + '"' + ","); // similarity
-					buf.append('"' + String.valueOf(note.getSignificance()) + '"' + "\n"); // signifiance
+					// uuid for the query batch
+                    			buf.append('"'+uuid+'"'+","); 
+					// source fn in binary
+					buf.append('"'+source_fn+'"'+","); 
+					// matched fn in database
+					buf.append('"'+matched_fn+'"'+","); 
+					// similarity
+					buf.append('"'+String.valueOf(note.getSimilarity())+'"'+","); 
+					// signifiance
+					buf.append('"'+String.valueOf(note.getSignificance())+'"'+"\n");
+
+					if(matched_fn.equals(source_fn)) { break; } 
 				}
 			}
 		}
