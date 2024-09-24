@@ -13,6 +13,7 @@ def prepare_data(files: list) -> pd.core.frame.DataFrame:
     for f in files:
         if os.path.exists(f):
             df = pd.read_csv(f)
+            df["similarity"] = df["similarity"].round(5)
             df["sim_range"] = pd.cut(
                                 df["similarity"],
                                 np.arange(0.0, 1.2, 0.2),
