@@ -4,6 +4,9 @@ import re
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import argparse
+
+import pdb
 
 colors = ["dodgerblue", "forestgreen", "mediumorchid", "black"]
 
@@ -25,59 +28,62 @@ def prepare_data(files: list) -> pd.core.frame.DataFrame:
 
     return pd.concat(data)
 
-def match_accuracy_table(df: pd.core.frame.DataFrame) -> bool:
+def match_accuracy_plot(df: pd.core.frame.DataFrame) -> bool:
     """ build the match accuracy table """
-    table_stats = {
-        "runs": [],
-        "row_labels": [
-            "[0.0 - 0.2)",
-            "[0.2 - 0.4)",
-            "[0.4 - 0.6)",
-            "[0.6 - 0.8)",
-            "[0.8 - 1.0)",
-            "# of Matches",
-            "# of Functions",
-            "Overall Accuracy"
-        ],
-        "data": {
-            "0": [],
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "num_matches": [],
-            "num_fns": [],
-            "acc": []
-        }
-    }
+    # collect results 
+    results = []
     runs = df.groupby("run")
     for run, data in runs:
-        table_stats["runs"].append(run)
-        num_fns = data["uuid"].nunique()
-        table_stats["data"]["num_fns"].append(num_fns)
-
         matched_sim_count = data.loc[data["queryfn"]==data["resultfn"]]["sim_range"].value_counts()
-        for i in np.arange(5):
-            table_stats["data"][str(i)].append(matched_sim_count[i])
 
-        num_matches = matched_sim_count.sum()
-        table_stats["data"]["num_matches"].append(num_matches)
-        table_stats["data"]["acc"].append(round(num_matches/num_fns, 3))
+        num_fns = data["uuid"].nunique()
+        entry = np.append(
+            matched_sim_count.sort_index().values,
+            num_fns - matched_sim_count.sum()
+        )
+        results.append(entry)
 
-    plt.table(
-        cellText=list(table_stats["data"].values()),
-        rowLabels=table_stats["row_labels"],
-        colLabels=table_stats["runs"],
-        colColours=list(zip(colors, [0.5 for i in range(len(colors))])),
-        alpha=0.5,
-        loc='center'
+    column_labels = [
+        "[0.0 - 0.2)",
+        "[0.2 - 0.4)",
+        "[0.4 - 0.6)",
+        "[0.6 - 0.8)",
+        "[0.8 - 1.0)",
+        "Unmatched"
+    ]
+    # put results in a df
+    table = pd.DataFrame(
+        results,
+        index=df["run"].unique(),
+        columns=column_labels
     )
-    ax = plt.gca()
-    ax.get_xaxis().set_visible(False)
-    ax.get_yaxis().set_visible(False)
-    plt.box(on=None)
-    ax.set_title("Correct Matches v. Similarity Scores")
-    plt.gcf().subplots_adjust(left=0.3)
+
+    # calculate percentages (normalize)
+    percents = table.div(table.sum(axis=1),axis=0).mul(100).round(3)
+
+    # plot percentages in a stacked bar graph
+    ax = percents.plot(kind="barh", stacked=True)
+    ax.legend(
+        loc="upper center",
+        bbox_to_anchor=(0.5, -0.05),
+        ncol=6,
+        frameon=False
+    )
+    ax.tick_params(left=False, bottom=False)
+    ax.spines[['top', 'bottom', 'left', 'right']].set_visible(False)
+
+    for c in ax.containers:
+        labels = [f'{w:0.2f}%' if (w := v.get_width()) > 0 else '' for v in c]
+        # add annotations
+        ax.bar_label(
+            c,
+            labels=labels,
+            label_type='center',
+            padding=0.3,
+            color='w'
+        )
+    ax.set_title("Matches by Similarity")
+    plt.gcf().set_size_inches(12, 5)
     plt.savefig("match-accuracy.png")
 
     return True
@@ -128,23 +134,161 @@ def sim_conf_correlation(df: pd.core.frame.DataFrame) -> bool:
 
     return True
 
-def analyze(files: list) -> None:
-    data = prepare_data(files)
+def top_result(df: pd.core.frame.DataFrame, ns: str) -> bool:
+    """ report top1 accuracy based on similarity """
 
-    created_table = match_accuracy_table(data)
-    if created_table:
-        print("Created match accuracy table")
-    else:
-        print("Failed to create match accuracy table")
+    results = []
+    runs = df.groupby("run")
+    for run, data in runs:
+        total = data["uuid"].nunique()
 
-    created_plot = sim_conf_correlation(data)
-    if created_plot:
-        print("Created sim v. conf correlation plot")
-    else:
-        print("Failed to create sim v. conf correlation plot")
+        # drop after recording all queries, may lose some data
+        # inadvertently 
+        if ns != "":
+            data.drop(
+                data[~data["resultfn"].str.startswith(ns)].index,
+                inplace=True
+            )
+
+        num_top = 0
+        num_ties = 0
+        num_matched_not_top = 0
+
+        queries = data.groupby("uuid")
+        for _, data in queries:
+            # if no matches in group, nothing to record, no matches
+            if len(data[data["queryfn"] == data["resultfn"]]) == 0:
+                continue
+
+            else:
+                # get the top result by similarity and keep all ties
+                top = data.nlargest(
+                    1,
+                    "similarity",
+                    keep="all")
+                # get just matches from the top
+                top = top[top["queryfn"] == top["resultfn"]]
+
+                # exactly one match in the top group
+                if len(top) == 1:
+                    num_top += 1
+                # multiple matches tied in the top group
+                elif len(top) > 1:
+                    num_ties += 1
+                # we already know there exists some match
+                # but it's not in the top group
+                else:
+                    num_matched_not_top += 1
+
+        results.append(
+            [num_top,
+            num_ties,
+            num_matched_not_top,
+            total - (num_top+num_ties+num_matched_not_top)
+            ])
+
+    column_labels = [
+        "Top Similarity",
+        "Top Similarity w/ Ties",
+        "Matched, not top simialarity",
+        "Unmatched"
+    ]
+    # put results in a df
+    table = pd.DataFrame(
+        results,
+        index=df["run"].unique(),
+        columns=column_labels
+    )
+
+    # calculate percentages (normalize)
+    percents = table.div(table.sum(axis=1),axis=0).mul(100).round(3)
+
+    # plot percentages in a stacked bar graph
+    ax = percents.plot(kind="barh", stacked=True)
+    ax.legend(
+        loc="upper center",
+        bbox_to_anchor=(0.5, -0.05),
+        ncol=6,
+        frameon=False
+    )
+    ax.tick_params(left=False, bottom=False)
+    ax.spines[['top', 'bottom', 'left', 'right']].set_visible(False)
+
+    for c in ax.containers:
+        labels = [f'{w:0.2f}%' if (w := v.get_width()) > 0 else '' for v in c]
+        # add annotations
+        ax.bar_label(
+            c,
+            labels=labels,
+            label_type='center',
+            padding=0.3,
+            color='w'
+        )
+    ax.set_title("Match Accuracy by Top Similarity")
+    plt.gcf().set_size_inches(12, 5)
+    plt.savefig("top-similarity-accuracy.png")
+
+    return True
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Provide files")
-    else:
-        analyze(sys.argv[1:])
+    parser = argparse.ArgumentParser(
+        description="perform data analysis on results from bsim")
+
+    # available anlyses
+    parser.add_argument(
+        "--sim_conf_correlation",
+        dest="sim_conf_correlation",
+        action="store_true",
+        help="perform correlation analysis between similarity and confidence"
+    )
+    parser.add_argument(
+        "--match-accuracy",
+        dest="match_accuracy",
+        action='store_true',
+        help="generate a table of match accuracy by similarity range"
+    )
+    parser.add_argument(
+        "--top-result",
+        dest='top_result',
+        action="store_true",
+        help="generate a table of accuracy in just the top result by similarity"
+    )
+    parser.add_argument(
+        "--all",
+        dest="all",
+        action="store_true",
+        help="perform all available analyses"
+    )
+
+    # other arguments
+    parser.add_argument(
+        "--namespace",
+        dest="ns",
+        default="",
+        help="optional filter by namespace"
+    )
+
+    # result files to analyze
+    parser.add_argument(
+        "files",
+        metavar="FILE",
+        nargs="+"
+    )
+    args = parser.parse_args()
+
+    data = prepare_data(args.files)
+
+    if args.match_accuracy or args.all:
+        succ = match_accuracy_plot(data)
+        if succ:
+            print("Generated match accuracy plot")
+
+    if args.sim_conf_correlation or args.all:
+        succ = sim_conf_correlation(data)
+        if succ:
+            print("Generated similarity v. confidence correlations")
+
+    if args.top_result or args.all:
+        succ = top_result(data, args.ns)
+        if succ:
+            print("Generated top result plot")
