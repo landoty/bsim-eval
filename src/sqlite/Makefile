@@ -9,3 +9,5 @@ opt2:
 
 opt3:
 	clang -c -O3 sqlite3.c -o sqlite3-O3.o
+
+all: opt0 opt1 opt2 opt3

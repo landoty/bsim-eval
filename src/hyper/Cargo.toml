@@ -13,18 +13,18 @@ hyper-util = { version = "0.1", features = ["full"] }
 strip = "none"
 lto = "off"
 
-[profile.zero]
+[profile.opt0]
 inherits = "dev" 
 opt-level = 0
 
-[profile.one]
+[profile.opt1]
 inherits = "dev" 
 opt-level = 1
 
-[profile.two]
+[profile.opt2]
 inherits = "dev" 
 opt-level = 2
 
-[profile.three]
+[profile.opt3]
 inherits = "dev" 
 opt-level = 3
