@@ -31,6 +31,16 @@ do
 	cargo build --profile $l
 done
 popd
+ 
+echo "------ Rust Coreutils ------"
+pushd coreutils-rs
+pushd coreutils
+ for l in ${rs_levels[@]};
+do
+	cargo build --profile $l
+done
+popd
+popd
 
 echo "------ SQLite3 ------"
 pushd sqlite
