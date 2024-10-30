@@ -1,0 +1,104 @@
+####### bat-O0vO0-x64 #######
+	matched, geomean, similarity:1.0
+	matched, geomean, confidence: 38.4229941588447
+	unmatched, geomean, similarity: 1.0
+	unmatched, geomean, confidence: 9.724524200650754
+	matched, iqr, similarity: [0.]
+	matched, iqr, confidence: [26.09410167]
+	unmatched, iqr, similarity: [0.]
+	unmatched, iqr, confidence: [0.59584829]
+	matched, mad, similarity: 0.0
+	matched, mad, confidence: 25.244174950234537
+	unmatched, mad, similarity: 0.0
+	unmatched, mad, confidence: 0.5434214997333235
+####### bat-O0vO1-x64 #######
+	matched, geomean, similarity:0.3307874193548387
+	matched, geomean, confidence: 8.414245049700247
+	unmatched, geomean, similarity: 0.24115073419870744
+	unmatched, geomean, confidence: 5.258443460345402
+	matched, iqr, similarity: [0.13071]
+	matched, iqr, confidence: [6.37212054]
+	unmatched, iqr, similarity: [0.1033]
+	unmatched, iqr, confidence: [3.51110589]
+	matched, mad, similarity: 0.13498741935483868
+	matched, mad, confidence: 2.2842087181030752
+	unmatched, mad, similarity: 0.07342073419870745
+	unmatched, mad, confidence: 1.7929849870553145
+####### bat-O0vO2-x64 #######
+	matched, geomean, similarity:0.3169822222222222
+	matched, geomean, confidence: 9.022622428130386
+	unmatched, geomean, similarity: 0.2479827436647174
+	unmatched, geomean, confidence: 4.16492794304124
+	matched, iqr, similarity: [0.1348]
+	matched, iqr, confidence: [3.72686414]
+	unmatched, iqr, similarity: [0.06701]
+	unmatched, iqr, confidence: [2.88595984]
+	matched, mad, similarity: 0.12047222222222223
+	matched, mad, confidence: 2.661007710734115
+	unmatched, mad, similarity: 0.0951527436647174
+	unmatched, mad, confidence: 1.4052616533549447
+####### bat-O0vO3-x64 #######
+	matched, geomean, similarity:0.2989511111111111
+	matched, geomean, confidence: 7.193755778260469
+	unmatched, geomean, similarity: 0.24979859869921445
+	unmatched, geomean, confidence: 4.140479270342801
+	matched, iqr, similarity: [0.17663]
+	matched, iqr, confidence: [7.42894363]
+	unmatched, iqr, similarity: [0.072545]
+	unmatched, iqr, confidence: [2.97216643]
+	matched, mad, similarity: 0.13699111111111112
+	matched, mad, confidence: 4.534220550863664
+	unmatched, mad, similarity: 0.09890859869921445
+	unmatched, mad, confidence: 1.4462307593906782
+####### bat-O1vO0-x64 #######
+	matched, geomean, similarity:0.2905565
+	matched, geomean, confidence: 7.325528769948354
+	unmatched, geomean, similarity: 0.18998525425153753
+	unmatched, geomean, confidence: 4.465525394454939
+	matched, iqr, similarity: [0.0856025]
+	matched, iqr, confidence: [6.57509394]
+	unmatched, iqr, similarity: [0.11233]
+	unmatched, iqr, confidence: [2.33152448]
+	matched, mad, similarity: 0.1014015
+	matched, mad, confidence: 2.905733020538847
+	unmatched, mad, similarity: 0.07413525425153754
+	unmatched, mad, confidence: 1.181537358853216
+####### bat-O1vO1-x64 #######
+	matched, geomean, similarity:1.0
+	matched, geomean, confidence: 342.28489004816856
+	unmatched, geomean, similarity: 1.0
+	unmatched, geomean, confidence: 10.221127222489441
+	matched, iqr, similarity: [0.]
+	matched, iqr, confidence: [205.42244947]
+	unmatched, iqr, similarity: [0.]
+	unmatched, iqr, confidence: [0.32574606]
+	matched, mad, similarity: 0.0
+	matched, mad, confidence: 262.28766881150216
+	unmatched, mad, similarity: 0.0
+	unmatched, mad, confidence: 0.11843017336922479
+####### bat-O1vO2-x64 #######
+	matched, geomean, similarity:0.3654655882352941
+	matched, geomean, confidence: 39.41745179763625
+	unmatched, geomean, similarity: 0.3363940025015635
+	unmatched, geomean, confidence: 7.737723819150647
+	matched, iqr, similarity: [0.268165]
+	matched, iqr, confidence: [30.54901023]
+	unmatched, iqr, similarity: [0.1393775]
+	unmatched, iqr, confidence: [5.4302283]
+	matched, mad, similarity: 0.161495
+	matched, mad, confidence: 24.12577651670602
+	unmatched, mad, similarity: 0.17542900250156349
+	unmatched, mad, confidence: 3.777967927879507
+####### bat-O1vO3-x64 #######
+	matched, geomean, similarity:0.34439000000000003
+	matched, geomean, confidence: 37.178944664062286
+	unmatched, geomean, similarity: 0.3345339704069051
+	unmatched, geomean, confidence: 7.6975585386877245
+	matched, iqr, similarity: [0.179205]
+	matched, iqr, confidence: [24.71193911]
+	unmatched, iqr, similarity: [0.1371175]
+	unmatched, iqr, confidence: [5.31907583]
+	matched, mad, similarity: 0.13975000000000004
+	matched, mad, confidence: 21.586286389490535
+	unmatched, mad, similarity: 0.17083397040690507
+	unmatched, mad, confidence: 3.5161061560058005

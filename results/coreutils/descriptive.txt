@@ -1,0 +1,78 @@
+####### coreutils-x86_64-O0vO1 #######
+	matched, geomean, similarity:0.3900786646884272
+	matched, geomean, confidence: 35.579110265762495
+	unmatched, geomean, similarity: 0.15774219227425165
+	unmatched, geomean, confidence: 4.406024455104551
+	matched, iqr, similarity: [0.24334]
+	matched, iqr, confidence: [33.88730475]
+	unmatched, iqr, similarity: [0.09425]
+	unmatched, iqr, confidence: [3.60465977]
+	matched, mad, similarity: 0.1394486646884272
+	matched, mad, confidence: 22.64312227796693
+	unmatched, mad, similarity: 0.046897807725748336
+	unmatched, mad, confidence: 1.8193124997265224
+####### coreutils-x86_64-O0vO2 #######
+	matched, geomean, similarity:0.3613869254658385
+	matched, geomean, confidence: 28.478447454669336
+	unmatched, geomean, similarity: 0.157981971362245
+	unmatched, geomean, confidence: 4.348248341734635
+	matched, iqr, similarity: [0.250585]
+	matched, iqr, confidence: [32.39252571]
+	unmatched, iqr, similarity: [0.09511]
+	unmatched, iqr, confidence: [3.72600639]
+	matched, mad, similarity: 0.1334769254658385
+	matched, mad, confidence: 17.93229834469968
+	unmatched, mad, similarity: 0.047961971362245004
+	unmatched, mad, confidence: 1.8929160255822008
+####### coreutils-x86_64-O0vO3 #######
+	matched, geomean, similarity:0.35088033222591364
+	matched, geomean, confidence: 27.29766960812228
+	unmatched, geomean, similarity: 0.15913318490781064
+	unmatched, geomean, confidence: 4.376065660085024
+	matched, iqr, similarity: [0.25175]
+	matched, iqr, confidence: [31.8636523]
+	unmatched, iqr, similarity: [0.09359]
+	unmatched, iqr, confidence: [3.71917405]
+	matched, mad, similarity: 0.13198033222591363
+	matched, mad, confidence: 17.58294418171267
+	unmatched, mad, similarity: 0.04770318490781064
+	unmatched, mad, confidence: 1.8650987072318124
+####### coreutils-x86_64-O1vO2 #######
+	matched, geomean, similarity:0.8299151080550098
+	matched, geomean, confidence: 139.7319804190232
+	unmatched, geomean, similarity: 0.20691055563787225
+	unmatched, geomean, confidence: 5.918488397580467
+	matched, iqr, similarity: [0.30927]
+	matched, iqr, confidence: [108.43060676]
+	unmatched, iqr, similarity: [0.07536]
+	unmatched, iqr, confidence: [2.83750529]
+	matched, mad, similarity: 0.1700848919449902
+	matched, mad, confidence: 79.18796900504347
+	unmatched, mad, similarity: 0.11101055563787225
+	unmatched, mad, confidence: 3.886622254849132
+####### coreutils-x86_64-O1vO3 #######
+	matched, geomean, similarity:0.7931223360655737
+	matched, geomean, confidence: 129.83050390195442
+	unmatched, geomean, similarity: 0.20788048690971372
+	unmatched, geomean, confidence: 5.79710925817368
+	matched, iqr, similarity: [0.3749925]
+	matched, iqr, confidence: [89.59879587]
+	unmatched, iqr, similarity: [0.13206]
+	unmatched, iqr, confidence: [5.42112043]
+	matched, mad, similarity: 0.2068776639344263
+	matched, mad, confidence: 71.77764911678841
+	unmatched, mad, similarity: 0.09427048690971372
+	unmatched, mad, confidence: 3.8981819518262606
+####### coreutils-x86_64-O2vO3 #######
+	matched, geomean, similarity:0.9176631313131313
+	matched, geomean, confidence: 194.1939162470103
+	unmatched, geomean, similarity: 0.2123162450199203
+	unmatched, geomean, confidence: 6.237822481909107
+	matched, iqr, similarity: [0.104745]
+	matched, iqr, confidence: [147.04777233]
+	unmatched, iqr, similarity: [0.09344]
+	unmatched, iqr, confidence: [5.02664824]
+	matched, mad, similarity: 0.08233686868686874
+	matched, mad, confidence: 123.14635921746243
+	unmatched, mad, similarity: 0.1353262450199203
+	unmatched, mad, confidence: 5.358133687784703
