@@ -1,0 +1,6 @@
+[submodule "src/bat/bat"]
+	path = src/bat/bat
+	url = git@github.com:sharkdp/bat.git
+[submodule "src/coreutils-rs/coreutils"]
+	path = src/coreutils-rs/coreutils
+	url = git@github.com:uutils/coreutils.git
