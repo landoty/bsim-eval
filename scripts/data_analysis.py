@@ -83,7 +83,7 @@ def match_accuracy_plot(df: pd.core.frame.DataFrame) -> bool:
             color='w'
         )
     ax.set_title("Matches by Similarity")
-    plt.gcf().set_size_inches(12, 5)
+    plt.gcf().set_size_inches(14.5, 5)
     plt.savefig("match-accuracy.png")
 
     return True
@@ -108,7 +108,7 @@ def sim_conf_correlation(df: pd.core.frame.DataFrame) -> bool:
     axs[0].hist(
         plot_stats["data"]["sims"],
         alpha=0.7,
-        color=colors[0:len(plot_stats["data"]["sims"])],
+        #color=colors[0:len(plot_stats["data"]["sims"])],
         label=plot_stats["runs"],
         bins=10,
         range=(0.0,1.0),
@@ -122,13 +122,15 @@ def sim_conf_correlation(df: pd.core.frame.DataFrame) -> bool:
         axs[1].scatter(
             plot_stats["data"]["sims"][i],
             plot_stats["data"]["confs"][i],
-            color=colors[i],
+            #color=colors[i],
+            s = 5,
             alpha=0.7)
         axs[1].set_xlabel("similarity")
         axs[1].set_ylabel("confidence")
         axs[1].set_title("Correct Match Similarity v. Confidence")
 
-    fig.legend()
+    fig.legend(loc="upper right", bbox_to_anchor=(0.35, 0.90))
+    plt.gcf().set_size_inches(10, 6)
     plt.savefig("positive-match-correlation.png")
     plt.clf()
 
@@ -225,10 +227,44 @@ def top_result(df: pd.core.frame.DataFrame, ns: str) -> bool:
             color='w'
         )
     ax.set_title("Match Accuracy by Top Similarity")
-    plt.gcf().set_size_inches(12, 5)
+    plt.gcf().set_size_inches(14.5, 5)
     plt.savefig("top-similarity-accuracy.png")
 
     return True
+
+def calculate_descriptive(df: pd.core.frame.DataFrame) -> bool:
+    """ Calculate descriptive statistics
+
+        Geo Mean
+    """
+    geo_mean = lambda x: np.exp(np.log(x)).mean()
+    iqr = lambda x: np.diff(np.percentile(x, [25,75]))
+    mad = lambda x: np.median(np.absolute(x - geo_mean(x)))
+
+    outfile = open("descriptive.txt", "w")
+
+    runs = df.groupby("run")
+    for run, data in runs:
+        outfile.write(f"####### {run} #######\n")
+        matched = data[data["queryfn"] == data["resultfn"]]
+        unmatched = data[data["queryfn"] != data["resultfn"]]
+        # Geo Mean
+        outfile.write(f"\tmatched, geomean, similarity:{geo_mean(matched['similarity'])}\n")
+        outfile.write(f"\tmatched, geomean, confidence: {geo_mean(matched['confidence'])}\n")
+        outfile.write(f"\tunmatched, geomean, similarity: {geo_mean(unmatched['similarity'])}\n")
+        outfile.write(f"\tunmatched, geomean, confidence: {geo_mean(unmatched['confidence'])}\n")
+
+        # IQR
+        outfile.write(f"\tmatched, iqr, similarity: {iqr(matched['similarity'])}\n")
+        outfile.write(f"\tmatched, iqr, confidence: {iqr(matched['confidence'])}\n")
+        outfile.write(f"\tunmatched, iqr, similarity: {iqr(unmatched['similarity'])}\n")
+        outfile.write(f"\tunmatched, iqr, confidence: {iqr(unmatched['confidence'])}\n")
+
+        # MAD
+        outfile.write(f"\tmatched, mad, similarity: {mad(matched['similarity'])}\n")
+        outfile.write(f"\tmatched, mad, confidence: {mad(matched['confidence'])}\n")
+        outfile.write(f"\tunmatched, mad, similarity: {mad(unmatched['similarity'])}\n")
+        outfile.write(f"\tunmatched, mad, confidence: {mad(unmatched['confidence'])}\n")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
@@ -252,6 +288,13 @@ if __name__ == "__main__":
         dest='top_result',
         action="store_true",
         help="generate a table of accuracy in just the top result by similarity"
+    )
+    parser.add_argument(
+        "--descriptive",
+        dest="descriptive",
+        action="store_true",
+        help="calculate a set of descriptive statistics for similarity and \
+        confidence"
     )
     parser.add_argument(
         "--all",
@@ -292,3 +335,8 @@ if __name__ == "__main__":
         succ = top_result(data, args.ns)
         if succ:
             print("Generated top result plot")
+
+    if args.descriptive or args.all:
+        succ = calculate_descriptive(data)
+        if succ:
+            print("Generated descriptive statistics")
